@@ -1,0 +1,4 @@
+# Docker Compose configuration for Group 6 Trending Content project.
+# Services will be configured according to the approved project architecture.
+
+services:
