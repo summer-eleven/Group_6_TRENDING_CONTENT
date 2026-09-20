@@ -32,19 +32,36 @@ RStudio and Jupyter are used for exploratory data analysis, visualization, stati
 
 ## Data Flow
 
+## Data Flow
+
+## Data Flow
+
+```text
 YouTube API
-↓
+     ↓
 Python Data Collection
-↓
+     ↓
 MinIO (Raw Data)
-↓
+     ↓
 Database
-↓
+     ↓
 RStudio / Jupyter
-↓
+     ↓
 EDA & Machine Learning
-↓
+     ↓
 Research Results
+```
+
+## Docker Architecture
+
+Docker is used to provide a consistent environment for the project services.
+
+The main services include:
+
+- Python / Application
+- MinIO
+- Database
+- RStudio / Jupyter
 
 ## Docker Architecture
 
