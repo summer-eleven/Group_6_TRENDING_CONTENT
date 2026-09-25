@@ -14,6 +14,17 @@ services:
     volumes:
       - minio_data:/data
     command: server /data --console-address ":9001"
-
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: youtube_sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "YourStrong@Passw0rd"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
 volumes:
   minio_data:
+   sqlserver_data:
