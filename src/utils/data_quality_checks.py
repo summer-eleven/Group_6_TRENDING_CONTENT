@@ -27,13 +27,10 @@ import pandas as pd
 # Constants
 # ---------------------------------------------------------------------------
 EXPECTED_COLUMNS: list[str] = [
-    "video_id",
-    "title",
-    "channel",
-    "views",
-    "published",
-    "url",
-    "search_query",
+    "video_id", "title", "channel_id", "channel_title", "category_id",
+    "published_at", "region_code", "collected_at", "view_count",
+    "like_count", "comment_count", "trending_rank", "is_trending",
+    "upload_hour_utc", "video_url"
 ]
 
 YOUTUBE_URL_PATTERN = re.compile(
@@ -62,14 +59,14 @@ def check_duplicate_video_ids(df: pd.DataFrame) -> dict:
 
 
 def check_missing_critical_fields(df: pd.DataFrame) -> dict:
-    """Check for missing (NaN / empty-string) title, channel, or url.
+    """Check for missing (NaN / empty-string) title, channel_title, or video_url.
 
     Returns
     -------
     dict mapping field name → DataFrame of rows with missing values
     """
     results: dict[str, pd.DataFrame] = {}
-    for col in ("title", "channel", "url"):
+    for col in ("title", "channel_title", "video_url"):
         if col not in df.columns:
             results[col] = pd.DataFrame()
             continue
@@ -87,8 +84,8 @@ def check_invalid_views(df: pd.DataFrame) -> dict:
         non_numeric  – DataFrame of rows that cannot be parsed as numbers
         negative     – DataFrame of rows with views < 0
     """
-    views_numeric = pd.to_numeric(df["views"], errors="coerce")
-    non_numeric_mask = views_numeric.isna() & df["views"].notna()
+    views_numeric = pd.to_numeric(df["view_count"], errors="coerce")
+    non_numeric_mask = views_numeric.isna() & df["view_count"].notna()
     negative_mask = views_numeric < 0
 
     return {
@@ -106,12 +103,10 @@ def check_malformed_urls(df: pd.DataFrame) -> dict:
         count        – number of malformed URLs
         malformed    – DataFrame of affected rows
     """
-    if "url" not in df.columns:
+    if "video_url" not in df.columns:
         return {"count": 0, "malformed": pd.DataFrame()}
-
-    # Treat NaN / empty as already caught by missing-fields check;
-    # here we focus on non-empty values that look wrong.
-    non_empty = df["url"].fillna("").astype(str).str.strip()
+    
+    non_empty = df["video_url"].fillna("").astype(str).str.strip()
     mask = (non_empty != "") & (~non_empty.str.match(YOUTUBE_URL_PATTERN))
     return {
         "count": mask.sum(),
@@ -239,7 +234,7 @@ def format_summary(report: dict) -> str:
     lines.append(f"\n[5] Malformed URLs                 {status}")
     lines.append(f"    Count : {mu['count']}")
     if mu["count"] > 0:
-        sample_urls = mu["malformed"]["url"].head(5).tolist()
+        sample_urls = mu["malformed"]["video_url"].head(5).tolist()
         for u in sample_urls:
             lines.append(f"      → {u}")
 

@@ -1,8 +1,8 @@
 ======================================================================
   DATA-QUALITY VALIDATION REPORT
 ======================================================================
-  File   : C:\Users\VICTUS\Downloads\Group_6_TRENDING_CONTENT\Group_6_TRENDING_CONTENT\data\processed\youtube_clean.csv
-  Rows   : 461
+  File   : data/processed/youtube_dataset_1000_clean.csv
+  Rows   : 1,008
 ======================================================================
 
 [1] Duplicate video_id            ✅ PASS
@@ -11,10 +11,10 @@
 [2] Missing 'title'                ✅ PASS
     Missing rows : 0
 
-[2] Missing 'channel'                ✅ PASS
+[2] Missing 'channel_title'                ✅ PASS
     Missing rows : 0
 
-[2] Missing 'url'                ✅ PASS
+[2] Missing 'video_url'                ✅ PASS
     Missing rows : 0
 
 [3] Non-numeric views              ✅ PASS
