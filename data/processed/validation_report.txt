@@ -1,0 +1,34 @@
+======================================================================
+  DATA-QUALITY VALIDATION REPORT
+======================================================================
+  File   : C:\Users\VICTUS\Downloads\Group_6_TRENDING_CONTENT\Group_6_TRENDING_CONTENT\data\processed\youtube_clean.csv
+  Rows   : 461
+======================================================================
+
+[1] Duplicate video_id            ✅ PASS
+    Duplicated entries : 0
+
+[2] Missing 'title'                ✅ PASS
+    Missing rows : 0
+
+[2] Missing 'channel'                ✅ PASS
+    Missing rows : 0
+
+[2] Missing 'url'                ✅ PASS
+    Missing rows : 0
+
+[3] Non-numeric views              ✅ PASS
+    Count : 0
+
+[4] Negative views                 ✅ PASS
+    Count : 0
+
+[5] Malformed URLs                 ✅ PASS
+    Count : 0
+
+[6] Unexpected column changes      ✅ PASS
+    Schema matches expected columns.
+
+======================================================================
+  END OF REPORT
+======================================================================
