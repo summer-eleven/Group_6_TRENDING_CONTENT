@@ -43,3 +43,55 @@ BEGIN
     CREATE INDEX idx_youtube_videos_is_trending   ON youtube_videos (is_trending);
 END
 GO
+
+
+IF NOT EXISTS (
+    SELECT 1
+    FROM sys.tables
+    WHERE name = 'youtube_video_snapshots'
+)
+BEGIN
+    CREATE TABLE youtube_video_snapshots (
+        video_id VARCHAR(20) NOT NULL,
+        region_code VARCHAR(5) NOT NULL,
+        collected_at DATETIME2 NOT NULL,
+
+        view_count BIGINT NULL,
+        like_count BIGINT NULL,
+        comment_count BIGINT NULL,
+
+        is_trending BIT NOT NULL DEFAULT 0,
+        trending_rank INT NULL,
+        video_available BIT NOT NULL DEFAULT 1,
+
+        inserted_at DATETIME2 NOT NULL
+            DEFAULT SYSUTCDATETIME(),
+
+        CONSTRAINT pk_youtube_video_snapshots
+            PRIMARY KEY (
+                video_id,
+                region_code,
+                collected_at
+            ),
+
+        CONSTRAINT fk_snapshot_video
+            FOREIGN KEY (video_id)
+            REFERENCES youtube_videos(video_id),
+
+        CONSTRAINT chk_snapshot_view_count
+            CHECK (view_count IS NULL OR view_count >= 0),
+
+        CONSTRAINT chk_snapshot_like_count
+            CHECK (like_count IS NULL OR like_count >= 0),
+
+        CONSTRAINT chk_snapshot_comment_count
+            CHECK (comment_count IS NULL OR comment_count >= 0)
+    );
+
+    CREATE INDEX idx_snapshot_collected_at
+        ON youtube_video_snapshots(collected_at);
+
+    CREATE INDEX idx_snapshot_is_trending
+        ON youtube_video_snapshots(is_trending);
+END
+GO
