@@ -27,3 +27,29 @@ Negative user engagement has no significant effect on the virality of the YouTub
 
 **H₁₂(Alternative Hypothesis):**
 Negative user engagement has a significant effect on the virality a YouTube video.
+
+## Week 3 - Data Engineering Pipeline
+
+### Current Pipeline
+
+YouTube Data API
+→ Raw JSON
+→ MinIO Data Lake
+→ Processing
+→ SQL Server
+→ SQL Verification
+
+### Current Data Volume
+
+- Unique videos: 2,011
+- Trending videos: 1,011
+- Control videos: 1,000
+- Historical records: 8,066
+- Target: 10,000+ records
+
+### Environment Setup
+
+Copy the environment template:
+
+```powershell
+Copy-Item .env.example .env
