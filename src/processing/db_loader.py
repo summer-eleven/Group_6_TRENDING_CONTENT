@@ -5,7 +5,8 @@ import os
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, Iterable
- 
+from dotenv import load_dotenv
+load_dotenv()
 import pyodbc
  
 logging.basicConfig(level=logging.INFO)
