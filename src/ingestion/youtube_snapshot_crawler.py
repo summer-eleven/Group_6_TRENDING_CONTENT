@@ -11,7 +11,7 @@ load_dotenv()
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
-BASE_DATASET = "data/processed/youtube_dataset_1000_clean.csv"
+BASE_DATASET = "data/processed/youtube_dataset_2000_clean.csv"
 OUTPUT_DIR = Path("data/raw/snapshots")
 
 VIDEOS_URL = "https://www.googleapis.com/youtube/v3/videos"

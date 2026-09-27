@@ -4,7 +4,7 @@ import pandas as pd
 
 
 BASE_PATH = Path(
-    "data/processed/youtube_dataset_1000_clean.csv"
+    "data/processed/youtube_dataset_2000_clean.csv"
 )
 
 SNAPSHOT_DIR = Path(
