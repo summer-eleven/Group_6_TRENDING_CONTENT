@@ -1,9 +1,6 @@
-# Docker Compose configuration for Group 6 Trending Content project.
-# Services will be configured according to the approved project architecture.
-
 services:
   minio:
-    image: quay.io/minio/minio:latest
+    image: cgr.dev/chainguard/minio:latest
     container_name: minio
     ports:
       - "9000:9000"
@@ -25,6 +22,7 @@ services:
       - "1433:1433"
     volumes:
       - sqlserver_data:/var/opt/mssql
+ 
 volumes:
   minio_data:
-   sqlserver_data:
+  sqlserver_data:
