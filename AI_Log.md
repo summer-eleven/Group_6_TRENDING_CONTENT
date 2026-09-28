@@ -36,3 +36,52 @@ Tài liệu tham chiếu chính: "YouTube Data Pipeline: Week 3 Engineering Task
 | **2026-09-24 15:51:51** | **A2** | "1 chọn ghi đè bản cũ 2 chuyển thành 0 cứ lưu tạm chuỗi thô vào db"[cite: 1] | Dựa trên quyết định của người dùng, AI cập nhật và xuất mã Markdown chính thức cho tệp `docs/data_contract.md`[cite: 1]. |
 | **2026-09-24 16:06:36** | **A3** | "kiểm tra chất lượng dữ liệu thì nên import với phần code nào của dự án"[cite: 1] | AI tư vấn rằng các hàm kiểm tra cần được viết dạng module tái sử dụng và tích hợp vào quy trình của Hạ (Task H3) cũng như trước bước nạp Database của Nguyên (Task N3)[cite: 1]. |
 | **2026-09-27 01:35:15** | **A3** | "task a3 cuar tuaanf 3"[cite: 1] | AI liệt kê các hạng mục cần kiểm tra chất lượng (Data-quality checks) cho nhiệm vụ A3 dựa trên tài liệu "YouTube Data Pipeline: Week 3 Engineering Task Assignment"[cite: 1, 2]. |
+
+
+
+
+
+
+## 2026-09-27 to 2026-09-28 - Week 3 Data Engineering (Leader Hạ)
+
+### Task 
+
+Build, scale, integrate, and verify the YouTube data engineering pipeline for Report 2.
+
+### AI-assisted activities
+
+- Assisted with YouTube Data API integration.
+- Assisted with expanding the dataset from 1,011 to 2,011 unique videos.
+- Assisted with snapshot collection and historical dataset design.
+- Assisted with MinIO upload automation and Docker troubleshooting.
+- Assisted with SQL Server schema integration.
+- Assisted with Python ODBC connection and database loaders.
+- Assisted with SQL verification for row count, duplicates, null values, and sample records.
+- Assisted with Docker Compose configuration and environment-variable security.
+- Assisted with Git staging, stash, rebase, conflict resolution, and commit organization.
+- Assisted with technical documentation and Report 2 evidence organization.
+
+### Human Verification
+
+All generated code and commands were manually reviewed and executed by the team.
+
+Verified using:
+
+- Docker Compose
+- MinIO Web UI
+- Python terminal output
+- SQL Server Management Studio
+- GitHub commit history
+
+Current verified volume: 2011 unique videos; 10077 historical snapshot records; 0 failed loads.
+
+No API keys or passwords were committed to GitHub.
+
+
+### Current Verified Status
+- Unique videos: 2,011
+- Historical snapshot records: 10,077
+- Failed database loads: 0
+- 10,000+ milestone achieved.
+- Long-term target: 100,000 records.
+- Current progress toward long-term target: 10.08%.
