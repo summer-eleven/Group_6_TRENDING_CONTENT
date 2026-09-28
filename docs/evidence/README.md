@@ -14,31 +14,28 @@
   - Processed YouTube data stored under `trending-content/processed/`.
 
 ## SQL Server Verification
+- sql_row_count.png - Verifies master and snapshot row counts.
 
-- `sql_row_count.png`
-  - Verifies master and snapshot row counts.
+- sql_duplicate_check.png - Confirms no duplicate snapshot composite keys.
 
-- `sql_duplicate_check.png`
-  - Confirms no duplicate snapshot composite keys.
+- sql_null_check.png - Confirms required snapshot fields are not null.
 
-- `sql_null_check.png`
-  - Confirms required snapshot fields are not null.
+- sql_sample_records.png - Shows sample snapshot records stored in SQL Server.
 
-- `sql_sample_records.png`
-  - Shows sample snapshot records stored in SQL Server.
+- sql_snapshot_count_8066.png - Previous verification at 8,066 historical records.
 
-- `sql_snapshot_count_8066.png`
-  - Confirms 8,066 historical snapshot records are stored in SQL Server.
+- sql_snapshot_count_10077.png - Confirms 10,077 historical snapshot records are stored in SQL Server.
 
 ## Snapshot Pipeline
 
-- `history_8066.png`
-  - Confirms the historical dataset contains 8,066 records after deduplication.
+- `history_10077.png`
+  - Confirms the historical dataset contains 10,077 records after deduplication.
 
 ## Current Data Volume
 
 - Unique videos: 2,011
 - Trending videos: 1,011
 - Control videos: 1,000
-- Historical records: 8,066
-- Target: 10,000+ records
+- Historical records: 10,077
+- Long-term target: 100,000 records
+- Progress: 10.08%
