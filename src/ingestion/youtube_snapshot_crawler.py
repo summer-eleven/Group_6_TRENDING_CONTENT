@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 from datetime import datetime, timezone
@@ -8,6 +9,12 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
+
+#Bổ sung nhận tham số dòng lệnh --region
+parser = argparse.ArgumentParser(description="YouTube Snapshot Crawler")
+parser.add_argument("--region", type=str, default=None, help="Mã quốc gia cần crawl (vd: JP)")
+args = parser.parse_args()
+
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
@@ -27,14 +34,22 @@ df = pd.read_csv(
     },
 )
 
+#Nếu có truyền --region JP, chỉ lọc đúng region đó
+if args.region:
+    df = df[df["region_code"] == args.region.upper()]
+    regions = [args.region.upper()]
+    print(f"--> Đang lọc snapshot riêng cho Region: {args.region.upper()} ({len(df)} videos)")
+else:
+    regions = sorted(df["region_code"].dropna().unique())
+    
 collected_at = datetime.now(timezone.utc)
 timestamp = collected_at.strftime("%Y%m%d_%H%M%S")
 
-regions = sorted(
-    df["region_code"]
-    .dropna()
-    .unique()
-)
+#regions = sorted(
+#    df["region_code"]
+#    .dropna()
+#    .unique()
+#)
 
 popular_by_region = {}
 
@@ -161,6 +176,10 @@ trending_count = sum(
     1 for record in records
     if record["is_trending"] == 1
 )
+
+# Tự động gắn tên region vào tên file (VD: youtube_snapshot_JP_20260930_140000.json)
+region_suffix = f"_{args.region.upper()}" if args.region else "_ALL"
+output_path = OUTPUT_DIR / f"youtube_snapshot{region_suffix}_{timestamp}.json"
 
 print()
 print("=" * 60)
