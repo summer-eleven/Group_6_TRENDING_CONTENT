@@ -220,8 +220,11 @@ __marimo__/
 # Project data
 data/raw/*.json
 data/raw/*.csv
-data/raw/snapshots/*.json
+data/raw/snapshots/**
 data/processed/*.csv
+
+# Automated snapshot logs
+logs/
 
 !data/raw/.gitkeep
 !data/processed/.gitkeep
