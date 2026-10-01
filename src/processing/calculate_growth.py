@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
+=======
+"""N3 + N4 - Tính tốc độ tăng, growth rate, engagement, acceleration, high_growth_flag.
+
+Chạy từ thư mục gốc dự án (sau build_history.py):
+    uv run python src/processing/calculate_growth.py
+"""
+>>>>>>> Stashed changes
 from pathlib import Path
 
 import pandas as pd
 
+<<<<<<< Updated upstream
 
 INPUT_PATH = Path(
     "data/processed/youtube_history.csv"
@@ -406,3 +415,73 @@ print("Top viral candidates shown:", len(top_viral_candidates))
 
 print("Viral candidates saved to:", VIRAL_OUTPUT_PATH)
 print("Current trending VN saved to:", TRENDING_OUTPUT_PATH)
+=======
+ROOT = Path(__file__).resolve().parents[2]
+INPUT = ROOT / "data" / "processed" / "youtube_history_US.csv"
+OUTPUT = ROOT / "data" / "processed" / "growth_metrics_US.csv"
+
+METRICS = ["view", "like", "comment"]
+HIGH_GROWTH_QUANTILE = 0.90
+
+
+def main() -> None:
+    if not INPUT.exists():
+        raise SystemExit(f"Chưa có {INPUT}. Chạy build_history.py trước.")
+
+    df = pd.read_csv(INPUT)
+    df["collected_at"] = pd.to_datetime(df["collected_at"], utc=True)
+    for m in METRICS:
+        df[f"{m}_count"] = pd.to_numeric(df[f"{m}_count"], errors="coerce")
+    df = df.sort_values(["video_id", "collected_at"]).reset_index(drop=True)
+
+    g = df.groupby("video_id", group_keys=False)
+
+    # --- N3: delta (quan sát đầu tiên của mỗi video để trống) ---
+    for m in METRICS:
+        col = f"{m}_count"
+        df[f"prev_{col}"] = g[col].shift(1)
+        df[f"delta_{col}"] = df[col] - df[f"prev_{col}"]
+
+    prev_time = g["collected_at"].shift(1)
+    df["hours_since_prev"] = (df["collected_at"] - prev_time).dt.total_seconds() / 3600
+
+    # Chỉ tính tốc độ khi thời gian thực sự tiến về phía trước.
+    valid_dt = df["hours_since_prev"].where(df["hours_since_prev"] > 0)
+    for m in METRICS:
+        df[f"{m}s_per_hour"] = df[f"delta_{m}_count"] / valid_dt
+
+    # --- N3.1: growth rate (%) ---
+    for m in METRICS:
+        prev = df[f"prev_{m}_count"]
+        df[f"{m}_growth_rate"] = (df[f"delta_{m}_count"] / prev.where(prev > 0)) * 100
+
+    # --- N4: engagement, acceleration, high_growth_flag ---
+    valid_views = df["view_count"].where(df["view_count"] > 0)
+    df["engagement_rate"] = (df["like_count"] + df["comment_count"]) / valid_views
+
+    g = df.groupby("video_id", group_keys=False)
+    df["prev_views_per_hour"] = g["views_per_hour"].shift(1)
+    df["view_acceleration"] = df["views_per_hour"] - df["prev_views_per_hour"]
+
+    # Proxy mô tả (top 10% tốc độ view trong dữ liệu US), KHÔNG phải bằng chứng viral.
+    threshold = df["views_per_hour"].quantile(HIGH_GROWTH_QUANTILE)
+    flag = pd.Series(pd.NA, index=df.index, dtype="boolean")
+    has_speed = df["views_per_hour"].notna()
+    flag[has_speed] = df.loc[has_speed, "views_per_hour"] >= threshold
+    df["high_growth_flag"] = flag
+
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(OUTPUT, index=False, encoding="utf-8-sig")
+
+    print("Rows:", len(df), "| videos:", df["video_id"].nunique())
+    print("Dòng có views_per_hour:", int(has_speed.sum()))
+    print(f"Ngưỡng high_growth (P{int(HIGH_GROWTH_QUANTILE * 100)}): {threshold:,.1f} views/giờ")
+    print("Dòng high_growth_flag = True:", int(df["high_growth_flag"].fillna(False).sum()))
+    neg = (df["views_per_hour"] < 0).sum()
+    if neg:
+        print(f"LƯU Ý: {neg} dòng có views_per_hour < 0 (view giảm giữa 2 snapshot) - nên kiểm tra.")
+
+
+if __name__ == "__main__":
+    main()
+>>>>>>> Stashed changes
