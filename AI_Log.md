@@ -85,3 +85,12 @@ No API keys or passwords were committed to GitHub.
 - 10,000+ milestone achieved.
 - Long-term target: 100,000 records.
 - Current progress toward long-term target: 10.08%.
+
+## Additional AI Usage Records
+
+| Date | Member | AI Tool | Purpose | Result / Usage |
+|---|---|---|---|---|
+| 2026-09-30 | Hạ | ChatGPT | Support hourly YouTube snapshot pipeline implementation | Guidance reviewed, implemented, tested, and verified with Task Scheduler, MinIO, and SQL Server |
+| 2026-09-30 | Hạ | ChatGPT | Support SQL Server and MinIO integration for automated snapshots | Connection and data insertion were manually verified before use |
+| 2026-10-01 | Hạ | ChatGPT | Support hourly growth metric design | Growth calculations were implemented and validated using collected snapshot history |
+| 2026-10-01 | Hạ | ChatGPT | Support Viral Detection v1 design | Percentile normalization, viral score, signal count, and freshness filtering were reviewed and tested before inclusion |
