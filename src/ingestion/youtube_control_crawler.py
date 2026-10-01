@@ -40,7 +40,7 @@ SEARCH_QUERIES = [
     "finance",
 ]
 
-REGION = "VN"
+REGION = "US"
 TARGET_CONTROL_VIDEOS = 600
 
 with open(
