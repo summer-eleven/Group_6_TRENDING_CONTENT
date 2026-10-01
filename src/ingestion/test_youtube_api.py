@@ -14,7 +14,7 @@ url = "https://www.googleapis.com/youtube/v3/videos"
 params = {
     "part": "snippet,statistics",
     "chart": "mostPopular",
-    "regionCode": "VN",
+    "regionCode": "US",
     "maxResults": 50,
     "key": api_key,
 }
@@ -68,10 +68,3 @@ with open(output_path, "w", encoding="utf-8") as file:
 
 print("-" * 60)
 print("Raw JSON saved to:", output_path)
-
-
-
-
-
-
-
