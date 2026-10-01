@@ -18,7 +18,7 @@ SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 VIDEOS_URL = "https://www.googleapis.com/youtube/v3/videos"
 
 TARGET_NEW_VIDEOS = 400
-REGION = "VN"
+REGION = "US"
 
 SEARCH_QUERIES = [
     "music",
