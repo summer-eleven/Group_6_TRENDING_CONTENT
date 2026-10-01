@@ -36,11 +36,15 @@ if not API_KEY:
     )
 
 BASE_DATASET = "data/processed/youtube_dataset_2000_clean.csv"
+<<<<<<< Updated upstream
 
 OUTPUT_DIR = (
     Path("data/raw/snapshots")
     / REGION_CODE
 )
+=======
+OUTPUT_DIR = Path("data/raw/snapshots/US")
+>>>>>>> Stashed changes
 
 VIDEOS_URL = "https://www.googleapis.com/youtube/v3/videos"
 
@@ -67,7 +71,20 @@ if df.empty:
 collected_at = datetime.now(timezone.utc)
 timestamp = collected_at.strftime("%Y%m%d_%H%M%S")
 
+<<<<<<< Updated upstream
 print("Checking trending videos for region:", REGION_CODE)
+=======
+regions = sorted(
+    df["region_code"]
+    .dropna()
+    .unique()
+)
+#regions = sorted(
+#    df["region_code"]
+#    .dropna()
+#    .unique()
+#)
+>>>>>>> Stashed changes
 
 params = {
     "part": "snippet,statistics",
