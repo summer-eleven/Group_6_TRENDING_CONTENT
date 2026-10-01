@@ -8,18 +8,39 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv
 
+from src.ingestion.upload_raw_to_minio import upload_file_to_minio
+from src.utils.db_connection import get_connection
+
 load_dotenv()
 
-#Bổ sung nhận tham số dòng lệnh --region
-parser = argparse.ArgumentParser(description="YouTube Snapshot Crawler")
-parser.add_argument("--region", type=str, default=None, help="Mã quốc gia cần crawl (vd: JP)")
+# Receive region code from command line
+parser = argparse.ArgumentParser(
+    description="Collect hourly YouTube video statistics by region."
+)
+
+parser.add_argument(
+    "--region",
+    required=True,
+    help="YouTube region code, for example: VN, US, JP",
+)
+
 args = parser.parse_args()
 
+REGION_CODE = args.region.upper()
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
+if not API_KEY:
+    raise ValueError(
+        "YOUTUBE_API_KEY was not found. Check your .env file."
+    )
+
 BASE_DATASET = "data/processed/youtube_dataset_2000_clean.csv"
-OUTPUT_DIR = Path("data/raw/snapshots")
+
+OUTPUT_DIR = (
+    Path("data/raw/snapshots")
+    / REGION_CODE
+)
 
 VIDEOS_URL = "https://www.googleapis.com/youtube/v3/videos"
 
@@ -34,60 +55,57 @@ df = pd.read_csv(
     },
 )
 
-#Nếu có truyền --region JP, chỉ lọc đúng region đó
-if args.region:
-    df = df[df["region_code"] == args.region.upper()]
-    regions = [args.region.upper()]
-    print(f"--> Đang lọc snapshot riêng cho Region: {args.region.upper()} ({len(df)} videos)")
-else:
-    regions = sorted(df["region_code"].dropna().unique())
-    
+df = df[
+    df["region_code"].str.upper() == REGION_CODE
+].copy()
+
+if df.empty:
+    raise ValueError(
+        f"No videos found for region {REGION_CODE}"
+    )
+
 collected_at = datetime.now(timezone.utc)
 timestamp = collected_at.strftime("%Y%m%d_%H%M%S")
 
-#regions = sorted(
-#    df["region_code"]
-#    .dropna()
-#    .unique()
-#)
+print("Checking trending videos for region:", REGION_CODE)
 
-popular_by_region = {}
+params = {
+    "part": "snippet,statistics",
+    "chart": "mostPopular",
+    "regionCode": REGION_CODE,
+    "maxResults": 50,
+    "key": API_KEY,
+}
 
-for region in regions:
-    print("Checking trending videos for region:", region)
+response = requests.get(
+    VIDEOS_URL,
+    params=params,
+    timeout=30,
+)
 
-    params = {
-        "part": "snippet,statistics",
-        "chart": "mostPopular",
-        "regionCode": region,
-        "maxResults": 50,
-        "key": API_KEY,
-    }
+print("Status Code:", response.status_code)
 
-    response = requests.get(
-        VIDEOS_URL,
-        params=params,
-        timeout=30,
+if response.status_code != 200:
+    raise RuntimeError(
+        f"YouTube API error: {response.text}"
     )
 
-    print("Status Code:", response.status_code)
+data = response.json()
 
-    if response.status_code != 200:
-        print(response.text)
-        popular_by_region[region] = {}
-        continue
+popular_videos = {
+    video["id"]: rank
+    for rank, video in enumerate(
+        data.get("items", []),
+        start=1,
+    )
+}
 
-    data = response.json()
-
-    popular_by_region[region] = {
-        video["id"]: rank
-        for rank, video in enumerate(
-            data.get("items", []),
-            start=1,
-        )
-    }
-
-video_ids = df["video_id"].dropna().tolist()
+video_ids = (
+    df["video_id"]
+    .dropna()
+    .drop_duplicates()
+    .tolist()
+)
 
 statistics_by_id = {}
 
@@ -129,10 +147,7 @@ for _, row in df.iterrows():
         {},
     )
 
-    trending_rank = popular_by_region.get(
-        region,
-        {},
-    ).get(video_id)
+    trending_rank = popular_videos.get(video_id)
 
     record = {
         "video_id": video_id,
@@ -153,7 +168,9 @@ for _, row in df.iterrows():
 
     records.append(record)
 
-output_path = OUTPUT_DIR / f"youtube_snapshot_{timestamp}.json"
+output_path = OUTPUT_DIR / (
+    f"youtube_{REGION_CODE}_{timestamp}.json"
+)
 
 with open(
     output_path,
@@ -167,6 +184,77 @@ with open(
         indent=2,
     )
 
+minio_object_name = (
+    f"snapshots/{REGION_CODE}/{output_path.name}"
+)
+
+upload_file_to_minio(
+    output_path,
+    minio_object_name,
+)
+
+def to_int_or_none(value):
+    if value is None or value == "":
+        return None
+    return int(value)
+
+sql_rows = []
+
+for record in records:
+    sql_rows.append(
+        (
+            record["video_id"],
+            record["region_code"],
+            collected_at,
+            to_int_or_none(record["view_count"]),
+            to_int_or_none(record["like_count"]),
+            to_int_or_none(record["comment_count"]),
+            record["is_trending"],
+            record["trending_rank"],
+            record["video_available"],
+        )
+    )
+
+
+insert_sql = """
+INSERT INTO dbo.youtube_video_snapshots (
+    video_id,
+    region_code,
+    collected_at,
+    view_count,
+    like_count,
+    comment_count,
+    is_trending,
+    trending_rank,
+    video_available
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+"""
+
+
+connection = get_connection()
+cursor = None
+
+try:
+    cursor = connection.cursor()
+
+    cursor.fast_executemany = True
+
+    cursor.executemany(
+        insert_sql,
+        sql_rows,
+    )
+
+    connection.commit()
+
+    sql_inserted = len(sql_rows)
+
+finally:
+    if cursor is not None:
+        cursor.close()
+
+    connection.close()
+
 available_count = sum(
     1 for record in records
     if record["video_available"]
@@ -177,10 +265,6 @@ trending_count = sum(
     if record["is_trending"] == 1
 )
 
-# Tự động gắn tên region vào tên file (VD: youtube_snapshot_JP_20260930_140000.json)
-region_suffix = f"_{args.region.upper()}" if args.region else "_ALL"
-output_path = OUTPUT_DIR / f"youtube_snapshot{region_suffix}_{timestamp}.json"
-
 print()
 print("=" * 60)
 print("SNAPSHOT COMPLETED")
@@ -188,6 +272,8 @@ print("Records:", len(records))
 print("Available videos:", available_count)
 print("Trending now:", trending_count)
 print("Control now:", len(records) - trending_count)
+print("SQL rows inserted:", sql_inserted)
 print("Collected at:", collected_at.isoformat())
 print("Saved to:", output_path)
+print("MinIO object:", minio_object_name)
 print("=" * 60)

@@ -54,3 +54,83 @@ Copy the environment template:
 
 ```powershell
 Copy-Item .env.example .env
+```
+
+
+## Hourly Snapshot and Viral Detection Pipeline
+
+The project now supports automated hourly YouTube data collection for regional analysis.
+
+### Hourly Snapshot Collection
+
+- Region currently automated: VN
+- Collection frequency: every 1 hour
+- Automation: Windows Task Scheduler
+- Raw snapshot storage: `data/raw/snapshots/VN/`
+- Object storage: MinIO
+- Structured storage: SQL Server
+- Snapshot metrics:
+  - View count
+  - Like count
+  - Comment count
+  - Trending status
+  - Trending rank
+  - Video availability
+
+### Growth Analysis
+
+Hourly snapshots are merged into a historical dataset and used to calculate:
+
+- View growth
+- Like growth
+- Comment growth
+- Views per hour
+- Likes per hour
+- Comments per hour
+- View growth percentage per hour
+- Like growth percentage per hour
+- Comment growth percentage per hour
+
+Only intervals between 45 and 75 minutes are treated as valid hourly intervals.
+
+### Viral Detection v1
+
+Viral candidates are evaluated using percentile-based signals:
+
+- Views per hour
+- View growth percentage per hour
+- Likes per hour
+- Comments per hour
+
+The percentile signals are combined into a `viral_score`.
+
+Videos must have at least 3 valid signals to be included as viral candidates.
+
+Trending status is kept separate from the viral score so that the system can distinguish between:
+
+- Fast-growing videos that are not currently trending
+- Fast-growing videos that are already in YouTube Most Popular
+
+### Current Processing Results
+
+As of the latest completed analysis:
+
+- Unique videos: 2,011
+- Historical records: 29,517
+- Snapshot files processed: 21
+- Snapshot IDs including baseline: 22
+- VN viral candidates: 1,276
+- Current VN trending videos: 15
+- Viral ranking snapshot: 2026-10-01 03:00 UTC
+- Viral ranking snapshot in Vietnam time: 2026-10-01 10:00 ICT
+
+### Generated Analytical Datasets
+
+The processing pipeline generates:
+
+- `data/processed/youtube_history.csv`
+- `data/processed/youtube_growth.csv`
+- `data/processed/youtube_viral_candidates_vn.csv`
+- `data/processed/youtube_current_trending_vn.csv`
+
+Processed CSV files are excluded from Git and can be regenerated from the pipeline.

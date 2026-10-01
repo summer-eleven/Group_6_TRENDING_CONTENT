@@ -76,14 +76,14 @@ base_df = pd.read_csv(BASE_PATH)
 
 base_df = normalize_dataframe(
     base_df,
-    snapshot_id="baseline_1000",
+    snapshot_id="baseline_2000",
     source_file=BASE_PATH.name,
 )
 
 frames = [base_df]
 
 snapshot_files = sorted(
-    SNAPSHOT_DIR.glob("youtube_snapshot_*.json")
+    SNAPSHOT_DIR.rglob("youtube_*.json")
 )
 
 print("Snapshot files found:", len(snapshot_files))

@@ -12,7 +12,7 @@ search_queries = ["trending music",
 "popular videos",
 "new music",
 "entertainment",
-"trending news"
+"trending news",
 
 "viral music",
 "new song 2026",
