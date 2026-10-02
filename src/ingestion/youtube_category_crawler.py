@@ -15,18 +15,7 @@ OUTPUT_PATH = "data/raw/youtube_trending_expansion_raw.json"
 
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 
-REGIONS = [
-    "VN",
-    "US",
-    "GB",
-    "JP",
-    "KR",
-    "TH",
-    "SG",
-    "ID",
-    "PH",
-    "AU",
-]
+REGIONS = ["US"]
 
 CATEGORY_IDS = [
     "10",
@@ -38,7 +27,7 @@ CATEGORY_IDS = [
     "28",
 ]
 
-TARGET_NEW_VIDEOS = 600
+TARGET_NEW_VIDEOS = 500
 
 
 base_df = pd.read_csv(
@@ -61,73 +50,62 @@ for region in REGIONS:
         if len(new_records) >= TARGET_NEW_VIDEOS:
             break
 
-        print(
-            "Collecting:",
-            region,
-            "category:",
-            category_id,
-        )
+        print("Collecting:", region, "category:", category_id)
+        page_token = None
 
-        params = {
-            "part": "snippet,statistics",
-            "chart": "mostPopular",
-            "regionCode": region,
-            "videoCategoryId": category_id,
-            "maxResults": 50,
-            "key": API_KEY,
-        }
-
-        response = requests.get(
-            API_URL,
-            params=params,
-            timeout=30,
-        )
-
-        print("Status Code:", response.status_code)
-
-        if response.status_code != 200:
-            print("Skipped:", region, category_id)
-            continue
-
-        data = response.json()
-
-        for video in data.get("items", []):
-            video_id = video.get("id")
-
-            if not video_id:
-                continue
-
-            if video_id in existing_ids:
-                continue
-
-            if video_id in new_records:
-                continue
-
-            snippet = video.get("snippet", {})
-            statistics = video.get("statistics", {})
-
-            new_records[video_id] = {
-                "video_id": video_id,
-                "title": snippet.get("title"),
-                "channel_id": snippet.get("channelId"),
-                "channel_title": snippet.get("channelTitle"),
-                "category_id": snippet.get("categoryId"),
-                "published_at": snippet.get("publishedAt"),
-                "region_code": region,
-                "collected_at": collected_at,
-                "view_count": statistics.get("viewCount"),
-                "like_count": statistics.get("likeCount"),
-                "comment_count": statistics.get("commentCount"),
-                "is_trending": 1,
-                "trending_rank": None,
-                "source_category_id": category_id,
+        while len(new_records) < TARGET_NEW_VIDEOS:
+            params = {
+                "part": "snippet,statistics",
+                "chart": "mostPopular",
+                "regionCode": region,
+                "videoCategoryId": category_id,
+                "maxResults": 50,
+                "key": API_KEY,
             }
+            if page_token:
+                params["pageToken"] = page_token
 
-            if len(new_records) >= TARGET_NEW_VIDEOS:
+            response = requests.get(API_URL, params=params, timeout=30)
+            print("Status Code:", response.status_code)
+
+            if response.status_code != 200:
+                print("Skipped:", region, category_id)
                 break
 
-    if len(new_records) >= TARGET_NEW_VIDEOS:
-        break
+            data = response.json()
+            collected_at = datetime.now(timezone.utc).isoformat()
+
+            for video in data.get("items", []):
+                video_id = video.get("id")
+                if not video_id or video_id in existing_ids or video_id in new_records:
+                    continue
+
+                snippet = video.get("snippet", {})
+                statistics = video.get("statistics", {})
+
+                new_records[video_id] = {
+                    "video_id": video_id,
+                    "title": snippet.get("title"),
+                    "channel_id": snippet.get("channelId"),
+                    "channel_title": snippet.get("channelTitle"),
+                    "category_id": snippet.get("categoryId"),
+                    "published_at": snippet.get("publishedAt"),
+                    "region_code": region,
+                    "collected_at": collected_at,
+                    "view_count": statistics.get("viewCount"),
+                    "like_count": statistics.get("likeCount"),
+                    "comment_count": statistics.get("commentCount"),
+                    "is_trending": 1,
+                    "trending_rank": None,
+                    "source_category_id": category_id,
+                }
+
+                if len(new_records) >= TARGET_NEW_VIDEOS:
+                    break
+
+            page_token = data.get("nextPageToken")
+            if not page_token:
+                break
 
 
 records = list(new_records.values())
