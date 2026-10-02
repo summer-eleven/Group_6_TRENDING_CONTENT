@@ -36,7 +36,7 @@ if not API_KEY:
     )
 
 BASE_DATASET = "data/processed/youtube_dataset_2000_clean.csv"
-OUTPUT_DIR = Path("data/raw/snapshots/US")
+OUTPUT_DIR = Path("data/raw/snapshots") / REGION_CODE
 
 VIDEOS_URL = "https://www.googleapis.com/youtube/v3/videos"
 
