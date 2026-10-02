@@ -9,7 +9,7 @@ load_dotenv()
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
-REGIONS = ["VN", "US", "GB", "JP", "KR", "TH", "SG", "ID", "PH", "AU"]
+REGIONS = ["US"]
 
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 
@@ -17,49 +17,52 @@ all_records = []
 
 for region in REGIONS:
     print("Collecting region:", region)
+    page_token = None
+    rank = 0
 
-    params = {
-        "part": "snippet,statistics",
-        "chart": "mostPopular",
-        "regionCode": region,
-        "maxResults": 50,
-        "key": API_KEY,
-    }
-
-    response = requests.get(API_URL, params=params, timeout=30)
-
-    print("Status Code:", response.status_code)
-
-    if response.status_code != 200:
-        print("Failed region:", region)
-        print(response.text)
-        continue
-
-    data = response.json()
-
-    collected_at = datetime.now(timezone.utc).isoformat()
-
-    for rank, video in enumerate(data.get("items", []), start=1):
-        snippet = video.get("snippet", {})
-        statistics = video.get("statistics", {})
-
-        record = {
-            "video_id": video.get("id"),
-            "title": snippet.get("title"),
-            "channel_id": snippet.get("channelId"),
-            "channel_title": snippet.get("channelTitle"),
-            "category_id": snippet.get("categoryId"),
-            "published_at": snippet.get("publishedAt"),
-            "region_code": region,
-            "collected_at": collected_at,
-            "view_count": statistics.get("viewCount"),
-            "like_count": statistics.get("likeCount"),
-            "comment_count": statistics.get("commentCount"),
-            "is_trending": 1,
-            "trending_rank": rank,
+    while True:
+        params = {
+            "part": "snippet,statistics",
+            "chart": "mostPopular",
+            "regionCode": region,
+            "maxResults": 50,
+            "key": API_KEY,
         }
+        if page_token:
+            params["pageToken"] = page_token
 
-        all_records.append(record)
+        response = requests.get(API_URL, params=params, timeout=30)
+        print("Status Code:", response.status_code)
+        if response.status_code != 200:
+            print(response.text)
+            break
+
+        data = response.json()
+        collected_at = datetime.now(timezone.utc).isoformat()
+
+        for video in data.get("items", []):
+            rank += 1
+            snippet = video.get("snippet", {})
+            statistics = video.get("statistics", {})
+            all_records.append({
+                "video_id": video.get("id"),
+                "title": snippet.get("title"),
+                "channel_id": snippet.get("channelId"),
+                "channel_title": snippet.get("channelTitle"),
+                "category_id": snippet.get("categoryId"),
+                "published_at": snippet.get("publishedAt"),
+                "region_code": region,
+                "collected_at": collected_at,
+                "view_count": statistics.get("viewCount"),
+                "like_count": statistics.get("likeCount"),
+                "comment_count": statistics.get("commentCount"),
+                "is_trending": 1,
+                "trending_rank": rank,
+            })
+
+        page_token = data.get("nextPageToken")
+        if not page_token:
+            break
 
 unique_records = {}
 
