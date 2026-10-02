@@ -1,8 +1,8 @@
 ======================================================================
   DATA-QUALITY VALIDATION REPORT
 ======================================================================
-  File   : data/processed/youtube_dataset_1000_clean.csv
-  Rows   : 1,008
+  File   : data/processed/youtube_dataset_2000_clean.csv
+  Rows   : 1,996
 ======================================================================
 
 [1] Duplicate video_id            ✅ PASS
