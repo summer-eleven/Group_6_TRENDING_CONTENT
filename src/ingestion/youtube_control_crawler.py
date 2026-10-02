@@ -41,7 +41,7 @@ SEARCH_QUERIES = [
 ]
 
 REGION = "US"
-TARGET_CONTROL_VIDEOS = 600
+TARGET_CONTROL_VIDEOS = 800
 
 with open(
     "data/raw/youtube_popular_raw.json",
