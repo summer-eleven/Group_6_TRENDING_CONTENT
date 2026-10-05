@@ -21,7 +21,7 @@ from pathlib import Path
 
 import pandas as pd
 
-VIRAL_CSV = Path("data/processed/youtube_viral_candidates_vn.csv")
+VIRAL_CSV = Path("data/processed/youtube_viral_candidates_us.csv")
 EVIDENCE_ROOT = Path("evidence/validation")
 
 # (source, granularity, scope) - gia tri mac dinh, nguoi thu co the sua trong CSV
