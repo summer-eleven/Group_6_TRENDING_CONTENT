@@ -65,6 +65,7 @@ if df.empty:
     )
 
 collected_at = datetime.now(timezone.utc)
+sql_collected_at = collected_at.replace(tzinfo=None)
 timestamp = collected_at.strftime("%Y%m%d_%H%M%S")
 
 print("Checking trending videos for region:", REGION_CODE)
@@ -193,10 +194,30 @@ upload_file_to_minio(
     minio_object_name,
 )
 
+
 def to_int_or_none(value):
     if value is None or value == "":
         return None
     return int(value)
+
+
+def to_text_or_none(value):
+    if value is None or pd.isna(value):
+        return None
+    return str(value)
+
+
+def to_datetime_or_none(value):
+    if value is None or pd.isna(value) or value == "":
+        return None
+
+    parsed = pd.to_datetime(value, utc=True, errors="coerce")
+
+    if pd.isna(parsed):
+        return None
+
+    return parsed.to_pydatetime().replace(tzinfo=None)
+
 
 sql_rows = []
 
@@ -205,7 +226,7 @@ for record in records:
         (
             record["video_id"],
             record["region_code"],
-            collected_at,
+            sql_collected_at,
             to_int_or_none(record["view_count"]),
             to_int_or_none(record["like_count"]),
             to_int_or_none(record["comment_count"]),
@@ -216,7 +237,28 @@ for record in records:
     )
 
 
-insert_sql = """
+insert_parent_sql = """
+INSERT INTO dbo.youtube_videos (
+    video_id,
+    title,
+    channel_id,
+    channel_title,
+    category_id,
+    published_at,
+    region_code,
+    view_count,
+    like_count,
+    comment_count,
+    is_trending,
+    trending_rank,
+    raw_object_path,
+    collected_at
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"""
+
+
+insert_snapshot_sql = """
 INSERT INTO dbo.youtube_video_snapshots (
     video_id,
     region_code,
@@ -234,20 +276,82 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
 
 connection = get_connection()
 cursor = None
+sql_inserted = 0
+parent_inserted = 0
 
 try:
     cursor = connection.cursor()
 
-    cursor.fast_executemany = True
+    # Find which video IDs are already present in the parent table.
+    # Query in batches so this keeps working as the master dataset grows.
+    existing_parent_ids = set()
 
+    for start in range(0, len(video_ids), 500):
+        batch = video_ids[start:start + 500]
+        placeholders = ",".join("?" for _ in batch)
+
+        cursor.execute(
+            f"""
+            SELECT video_id
+            FROM dbo.youtube_videos
+            WHERE video_id IN ({placeholders})
+            """,
+            batch,
+        )
+
+        existing_parent_ids.update(
+            str(row[0]) for row in cursor.fetchall()
+        )
+
+    missing_parent_ids = set(video_ids) - existing_parent_ids
+
+    parent_rows = []
+
+    for record in records:
+        if record["video_id"] not in missing_parent_ids:
+            continue
+
+        parent_rows.append(
+            (
+                record["video_id"],
+                to_text_or_none(record["title"]) or "Untitled",
+                to_text_or_none(record["channel_id"]),
+                to_text_or_none(record["channel_title"]),
+                to_text_or_none(record["category_id"]),
+                to_datetime_or_none(record["published_at"]),
+                record["region_code"],
+                to_int_or_none(record["view_count"]),
+                to_int_or_none(record["like_count"]),
+                to_int_or_none(record["comment_count"]),
+                record["is_trending"],
+                record["trending_rank"],
+                minio_object_name,
+                sql_collected_at,
+            )
+        )
+
+    if parent_rows:
+        cursor.fast_executemany = True
+        cursor.executemany(
+            insert_parent_sql,
+            parent_rows,
+        )
+        parent_inserted = len(parent_rows)
+
+    # Only insert snapshots after every parent video_id is guaranteed to exist.
+    cursor.fast_executemany = True
     cursor.executemany(
-        insert_sql,
+        insert_snapshot_sql,
         sql_rows,
     )
 
     connection.commit()
 
     sql_inserted = len(sql_rows)
+
+except Exception:
+    connection.rollback()
+    raise
 
 finally:
     if cursor is not None:
@@ -272,6 +376,7 @@ print("Records:", len(records))
 print("Available videos:", available_count)
 print("Trending now:", trending_count)
 print("Control now:", len(records) - trending_count)
+print("SQL new parent videos inserted:", parent_inserted)
 print("SQL rows inserted:", sql_inserted)
 print("Collected at:", collected_at.isoformat())
 print("Saved to:", output_path)
