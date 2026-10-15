@@ -134,3 +134,114 @@ The processing pipeline generates:
 - `data/processed/youtube_current_trending_vn.csv`
 
 Processed CSV files are excluded from Git and can be regenerated from the pipeline.
+
+
+---
+
+## Project Status Update - 2026-10-15
+
+### Current Data Volume
+
+- Master dataset unique videos: 2,411
+- VN Rolling Cohort unique videos: 2,030
+- Known unique videos across master and cohort: 4,441
+- Verified VN cohort T0 observations: 2,030
+- Verified VN cohort T24 observations: 1,030
+- Next collection milestone: more than 35,000 unique videos
+
+Unique video counts are distinct from historical observations.
+T0 and T24 records do not count as additional unique videos.
+
+### Automated VN Data Pipeline
+
+The current pipeline includes:
+
+1. Daily Cohort Discovery
+   - Runs daily at 08:00 Vietnam time.
+   - Target: up to 1,000 new unique videos per run.
+   - Uses YouTube Data API v3 and uploads playlists.
+   - Stores T0 observations in SQL Server and MinIO.
+
+2. Rolling Cohort T24
+   - Checks pending batches every hour.
+   - Collects follow-up statistics after at least 24 hours.
+   - Synchronizes observations to SQL Server and MinIO.
+
+3. YouTube Chart Monitor
+   - Runs hourly at minute 10.
+   - Collects YouTube mostPopular chart observations.
+   - Stores raw JSON in MinIO and structured records in SQL Server.
+
+The legacy VN Hourly Snapshot scheduled task is disabled.
+
+### RQ1 - Upload Time and Chart Observation
+
+Research focus:
+Association between upload period and observed appearance
+on the YouTube mostPopular chart.
+
+Current dataset:
+data/processed/rq1_youtube_cohort_VN.csv
+
+Current results:
+- Cohort videos: 2,030
+- Videos discovered within 24 hours of upload: 901
+- Completed T24 observations: 1,030
+- Observed chart positives: 24
+- Confirmed chart negatives: 0
+- Complete 24-hour chart coverage: 0
+- RQ1 analysis-ready videos: 0
+
+Preliminary EDA was conducted using Python and RStudio.
+
+Important limitations:
+- Chart observation is not equivalent to universal viral status.
+- Missing chart observations cannot be treated as confirmed negatives.
+- Hourly sampling cannot rule out appearances between captures.
+- Existing cohorts have incomplete chart coverage.
+- Upload-period groups may differ in channel composition and video age.
+
+RQ1 hypothesis testing has not yet been completed.
+
+### RQ2 - Negative Comments and Viral Activity
+
+The YouTube comment collection module is located at:
+src/ingestion/youtube_comments.py
+
+Initial VN pilot:
+- Videos tested: 3
+- Top-level comments collected: 24
+- Duplicate comment IDs: 0
+- Missing video IDs: 0
+- Empty comment texts: 0
+- Invalid comment publication dates: 0
+
+The initial collection uses relevance-ranked comments.
+This is a pipeline validation sample, not a representative
+dataset for sentiment-based hypothesis testing.
+
+Next steps:
+- Expand the comment sample.
+- Clean and normalize comment text.
+- Build and validate sentiment labels.
+- Aggregate negative comment ratios by video.
+- Align comments with the appropriate observation window.
+
+### Reproducibility
+
+Python dependencies are managed using uv.
+
+Read-only planning commands:
+
+uv run python -m src.ingestion.run_daily_cohort --region VN
+
+uv run python -m src.ingestion.youtube_chart_monitor capture --region VN
+
+RQ1 analysis dataset generation:
+
+uv run python -m src.processing.build_rq1_dataset --region VN --apply
+
+Raw data is stored locally and in MinIO.
+Structured cohort and chart observations are stored in SQL Server.
+
+Secrets must remain in .env and must not be committed to Git.

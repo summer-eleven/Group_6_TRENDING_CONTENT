@@ -94,3 +94,26 @@ No API keys or passwords were committed to GitHub.
 | 2026-09-30 | Hạ | ChatGPT | Support SQL Server and MinIO integration for automated snapshots | Connection and data insertion were manually verified before use |
 | 2026-10-01 | Hạ | ChatGPT | Support hourly growth metric design | Growth calculations were implemented and validated using collected snapshot history |
 | 2026-10-01 | Hạ | ChatGPT | Support Viral Detection v1 design | Percentile normalization, viral score, signal count, and freshness filtering were reviewed and tested before inclusion |
+
+
+---
+
+## AI Usage Update - October 2026
+
+| Date | Member | AI Tool | Purpose | Human Verification |
+|---|---|---|---|---|
+| 2026-10-14 | Ha | ChatGPT | Support design and debugging of automated Daily Cohort discovery and T0 synchronization | Verified 1,000 new video IDs, successful SQL insertion and MinIO upload |
+| 2026-10-14 | Ha | ChatGPT | Support YouTube Chart Monitor validation and RQ1 dataset construction | Verified chart capture logs, SQL records and RQ1 output |
+| 2026-10-15 | Ha | ChatGPT | Assist T24 pipeline validation and interpretation of chart coverage | Verified 2,030 T0 records and 1,030 T24 records in SQL Server |
+| 2026-10-15 | Ha | ChatGPT | Assist RQ2 comment crawler debugging and dependency setup | Tested YouTube API collection on three videos |
+| 2026-10-15 | Ha | ChatGPT | Support comment data-quality checks and project documentation | Verified 24 comments with no duplicate IDs, missing IDs, empty texts or invalid publication dates |
+
+### Outstanding Research Limitations
+
+- RQ1 currently has no analysis-ready observations.
+- Chart coverage remains incomplete.
+- Chart absence cannot be automatically interpreted as a negative outcome.
+- The RQ2 sentiment classification and hypothesis testing are not completed.
+- The comment pilot is not representative of the full YouTube population.
+
+All AI-assisted changes require human review before Git integration.
