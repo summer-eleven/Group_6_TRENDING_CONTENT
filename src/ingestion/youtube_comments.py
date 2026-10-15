@@ -61,26 +61,30 @@ def fetch_top_comments(video_id, region_code="JP", max_comments=100):
 
     return pd.DataFrame(rows)
 
-
 def crawl_comments_for_video_list(
-    video_list, 
-    max_comments_per_video=100, 
-    region_code="JP", 
+    video_list,
+    max_comments_per_video=100,
+    region_code="JP",
     output_dir="data/raw/comments"
 ):
     """
-    Cào bình luận cho danh sách video được chỉ định và lưu ra file CSV & JSON.
+    Collect top-level YouTube comments from a list of videos.
+    Save raw comments as a JSON file.
     """
+
     out_path = Path(output_dir)
     out_path.mkdir(parents=True, exist_ok=True)
 
     all_comments = []
     total = len(video_list)
+
     print("=" * 60)
-    print(f"BẮT ĐẦU CÀO BÌNH LUẬN CHO {total} VIDEO TRENDING")
+    print(f"Starting comment collection for {total} videos")
     print("=" * 60)
 
     for idx, item in enumerate(video_list, start=1):
+
+        # Get video ID and region
         if isinstance(item, dict):
             vid = item.get("video_id")
             region = item.get("region_code", region_code)
@@ -88,35 +92,73 @@ def crawl_comments_for_video_list(
             vid = str(item).strip()
             region = region_code
 
-        print(f"[{idx}/{total}] Đang lấy comments của video: {vid} (Region: {region})...")
-        df_comments = fetch_top_comments(video_id=vid, region_code=region, max_comments=max_comments_per_video)
+        # Skip invalid video IDs
+        if not vid or not str(vid).strip():
+            print(f"[{idx}/{total}] Missing video ID. Skipped.")
+            continue
 
+        # Fetch comments
+        print(f"[{idx}/{total}] Processing video: {vid}")
+
+        df_comments = fetch_top_comments(
+            video_id=str(vid).strip(),
+            region_code=region,
+            max_comments=max_comments_per_video
+        )
+
+        # Collect results
         if not df_comments.empty:
             all_comments.append(df_comments)
-            print(f"    -> Đã lấy thành công {len(df_comments)} bình luận.")
-        else:
-            print(f"    -> Không có bình luận.")
 
-        # Nghỉ nhẹ 0.3s để đảm bảo an toàn quota API
+            print(
+                f"  Collected {len(df_comments)} comments."
+            )
+        else:
+            print("  No comments collected.")
+
+        # Small delay between video requests
         time.sleep(0.3)
 
+    # Combine collected comments
     if all_comments:
-        final_df = pd.concat(all_comments, ignore_index=True)
 
-        timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-        json_file = out_path / f"trending_comments_{timestamp}.json"
+        final_df = pd.concat(
+            all_comments,
+            ignore_index=True
+        )
 
-        # Chỉ lưu JSON với định dạng danh sách bản ghi và thụt dòng 2 khoảng trắng
-        final_df.to_json(json_file, orient="records", force_ascii=False, indent=2)
+        # Remove duplicate comments
+        final_df = final_df.drop_duplicates(
+            subset=["comment_id"],
+            keep="first"
+        )
 
-        print("\n" + "=" * 60)
-        print("HOÀN THÀNH THU THẬP RAW COMMENTS!")
-        print(f"- Tổng số bình luận thu thập được: {len(final_df)}")
-        print(f"- Đã lưu file JSON: {json_file}")
+        timestamp = datetime.now(
+            timezone.utc
+        ).strftime("%Y%m%d_%H%M%S")
+
+        json_file = (
+            out_path / f"trending_comments_{timestamp}.json"
+        )
+
+        # Save JSON
+        final_df.to_json(
+            json_file,
+            orient="records",
+            force_ascii=False,
+            indent=2
+        )
+
         print("=" * 60)
+        print("COMMENT COLLECTION COMPLETED")
+        print(f"Total comments: {len(final_df)}")
+        print(f"Output: {json_file}")
+        print("=" * 60)
+
         return final_df
+
     else:
-        print("\n[!] Không thu thập được bình luận nào từ danh sách video.")
+        print("No comments were collected.")
         return pd.DataFrame()
 
 
