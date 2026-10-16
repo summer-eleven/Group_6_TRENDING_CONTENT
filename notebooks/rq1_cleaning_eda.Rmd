@@ -1,0 +1,328 @@
+﻿---
+title: "RQ1 Data Cleaning & Exploratory Data Analysis"
+subtitle: "Rolling Cohort 24h & 7-Day Chart Observation Window (VN, US, JP)"
+author: "Hà - Group 6 (ADY201m)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    theme: cosmo
+    highlight: tango
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 10,
+  fig.height = 6
+)
+```
+
+# 1. Giới thiệu & Mục tiêu (Nhiệm vụ HA2 & HA3)
+
+Báo cáo này hiện thực hóa **Nhiệm vụ HA2 (Data Cleaning)** và **Nhiệm vụ HA3 (EDA trong RStudio)**:
+1. Đọc và chuẩn hóa dữ liệu từ processed dataset mà **không can thiệp vào file snapshot raw**.
+2. Kiểm tra chất lượng dữ liệu: mã hóa UTF-8, số dòng, region, timezone columns, khử trùng lặp cấp độ toàn cầu và từng thị trường.
+3. Tạo 4 biểu đồ EDA chuyên sâu hiển thị rõ cả **numerator/denominator (tử số / mẫu số)** và tự động lưu vào `reports/assets/rq1/`.
+4. Báo cáo tách biệt giữa **Global Unique (`n >= 100.000`)** và **Eligible RQ1 Sample** (chỉ gồm các video có đủ độ phủ giám sát chart).
+
+---
+
+# 2. Thiết lập Môi trường & Thư viện
+
+```{r libraries}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(lubridate)
+  library(jsonlite)
+  library(knitr)
+  library(scales)
+})
+
+# Cấu hình đường dẫn
+DATA_PROCESSED <- "../data/processed"
+ASSETS_DIR <- "../reports/assets/rq1"
+
+if (!dir.exists(ASSETS_DIR)) {
+  dir.create(ASSETS_DIR, recursive = TRUE)
+}
+
+# Timezone mapping theo chuẩn quy ước nhóm
+TIMEZONE_MAP <- c(
+  "JP" = "Asia/Tokyo",
+  "VN" = "Asia/Ho_Chi_Minh",
+  "US" = "America/New_York"
+)
+```
+
+---
+
+# 3. Đọc dữ liệu Processed Dataset (Mục 18)
+
+> **Quy tắc bắt buộc:** Đọc file processed, xác nhận UTF-8, số dòng, region và timezone columns. Không dùng file snapshot raw để tính mẫu độc nhất.
+
+```{r load_data}
+input_file <- file.path(DATA_PROCESSED, "youtube_dataset_2000_clean.csv")
+
+if (file.exists(input_file)) {
+  raw_df <- read.csv(
+    input_file,
+    fileEncoding = "UTF-8",
+    stringsAsFactors = FALSE
+  )
+} else {
+  message("Chưa có file dataset processed. Tạo dữ liệu mẫu cấu trúc chuẩn để kiểm thử.")
+  raw_df <- data.frame()
+}
+
+cat("Số dòng đọc được:", nrow(raw_df), "\n")
+```
+
+---
+
+# 4. Chuẩn hóa Schema & Feature Engineering (Mục 14 & Mục 18)
+
+Thực hiện chuẩn hóa các trường:
+- `local_upload_hour`: Giờ địa phương sau khi chuyển đổi timezone (JP = UTC+9, VN = UTC+7, US = UTC-4/-5).
+- `upload_period`: `Office` (09:00 - 17:00) vs. `Rest`.
+- `chart_status`: `OBSERVED_CHARTED`, `NOT_OBSERVED_WITH_COVERAGE`, `INCOMPLETE_COVERAGE`.
+
+```{r feature_engineering}
+clean_rq1_data <- function(df) {
+  if (nrow(df) == 0) return(df)
+  
+  df %>%
+    mutate(
+      pub_utc = ymd_hms(published_at, quiet = TRUE),
+      
+      # Quy đổi giờ địa phương chuẩn xác theo từng quốc gia
+      local_published_at = case_when(
+        region_code == "JP" ~ with_tz(pub_utc, tzone = "Asia/Tokyo"),
+        region_code == "VN" ~ with_tz(pub_utc, tzone = "Asia/Ho_Chi_Minh"),
+        region_code == "US" ~ with_tz(pub_utc, tzone = "America/New_York"),
+        TRUE ~ pub_utc
+      ),
+      
+      local_upload_hour = hour(local_published_at),
+      
+      # Phân loại Office vs Rest
+      upload_period = if_else(
+        local_upload_hour >= 9 & local_upload_hour < 17,
+        "Office",
+        "Rest"
+      ),
+      
+      # Gán cờ độ phủ chart
+      chart_coverage_ratio = if_else(
+        rep("chart_coverage_ratio" %in% names(df), n()),
+        as.numeric(df$chart_coverage_ratio),
+        1.0
+      ),
+      
+      is_trending_num = if_else(
+        rep("is_trending" %in% names(df), n()),
+        as.integer(df$is_trending),
+        0L
+      ),
+      
+      # Nhãn chart_status chuẩn mực theo quy ước nhóm
+      chart_status = case_when(
+        is_trending_num == 1 ~ "OBSERVED_CHARTED",
+        chart_coverage_ratio >= 0.70 ~ "NOT_OBSERVED_WITH_COVERAGE",
+        TRUE ~ "INCOMPLETE_COVERAGE"
+      ),
+      
+      best_rank = if_else(
+        rep("trending_rank" %in% names(df), n()),
+        as.integer(df$trending_rank),
+        NA_integer_
+      )
+    )
+}
+
+d <- clean_rq1_data(raw_df)
+
+# Xuất dataset chuẩn hóa cho RQ1 (Mục 15)
+output_rq1_dataset <- file.path(DATA_PROCESSED, "youtube_rq1_dataset.csv")
+write.csv(d, output_rq1_dataset, row.names = FALSE, fileEncoding = "UTF-8")
+cat("Đã lưu dataset chuẩn hóa cho RQ1:", output_rq1_dataset, "\n")
+```
+
+---
+
+# 5. QA và Tạo Mẫu Thống Kê (Code chuẩn đối soát Mục 21)
+
+```{r qa_sampling}
+stopifnot(all(c("video_id", "region_code", "upload_period", "chart_status") %in% names(d)))
+
+cat("--- Phân phối theo Region ---\n")
+print(table(d$region_code, useNA = "ifany"))
+
+cat("\n--- Phân phối theo Chart Status ---\n")
+print(table(d$chart_status, useNA = "ifany"))
+
+# Báo cáo tách biệt Global Unique vs Eligible RQ1 Sample (Mục 21)
+global_unique_count <- n_distinct(d$video_id)
+
+# Primary sample requires explicit completed-coverage labeling
+x <- subset(d, chart_status %in% c("OBSERVED_CHARTED", "NOT_OBSERVED_WITH_COVERAGE"))
+x$charted <- as.integer(x$chart_status == "OBSERVED_CHARTED")
+
+eligible_sample_count <- nrow(x)
+
+cat("\n=== ĐỐI SOÁT QUY MÔ (Mục 21) ===\n")
+cat("1. Global Unique video_id (Toàn nhóm >= 100.000):", global_unique_count, "\n")
+cat("2. Eligible RQ1 Sample (Đủ độ phủ quan sát):", eligible_sample_count, "\n")
+
+cat("\n--- Bảng chéo Region x Upload Period x Charted ---\n")
+print(with(x, table(region_code, upload_period, charted)))
+```
+
+---
+
+# 6. Trực quan hóa EDA & Lưu Assets (Mục 19 & Mục 20)
+
+### Biểu đồ 1: Số lượng video theo Giờ Upload và theo Region
+
+```{r plot1_upload_hour}
+p1 <- ggplot(d, aes(x = local_upload_hour, fill = region_code)) +
+  geom_bar(position = "dodge", alpha = 0.85, color = "black", linewidth = 0.2) +
+  scale_x_continuous(breaks = 0:23) +
+  labs(
+    title = "Phân phối Số lượng Video theo Giờ Upload Địa phương",
+    subtitle = "Hiển thị theo từng thị trường (VN / US / JP)",
+    x = "Giờ Upload Địa phương (0 - 23)",
+    y = "Số lượng Video",
+    fill = "Thị trường"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top", plot.title = element_text(face = "bold"))
+
+print(p1)
+ggsave(file.path(ASSETS_DIR, "rq1_upload_hour_by_region.png"), p1, width = 10, height = 5, dpi = 300)
+```
+
+---
+
+### Biểu đồ 2: Tỷ lệ Video theo Khung giờ Office vs. Rest
+
+```{r plot2_office_rest_ratio}
+period_df <- d %>%
+  group_by(region_code, upload_period) %>%
+  summarise(n = n(), .groups = "drop_last") %>%
+  mutate(
+    total = sum(n),
+    pct = round((n / total) * 100, 1),
+    label_text = paste0(n, "/", total, "\n(", pct, "%)")
+  )
+
+p2 <- ggplot(period_df, aes(x = region_code, y = n, fill = upload_period)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), alpha = 0.85, color = "black", linewidth = 0.2) +
+  geom_text(
+    aes(label = label_text),
+    position = position_dodge(width = 0.8),
+    vjust = -0.3,
+    size = 3.5,
+    fontface = "bold"
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Phân bổ Video theo Khung giờ: Office vs. Rest",
+    subtitle = "Hiển thị cả Numerator / Denominator và tỷ lệ %",
+    x = "Thị trường",
+    y = "Số lượng Video",
+    fill = "Khung giờ"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top", plot.title = element_text(face = "bold"))
+
+print(p2)
+ggsave(file.path(ASSETS_DIR, "rq1_office_rest_distribution.png"), p2, width = 9, height = 5, dpi = 300)
+```
+
+---
+
+### Biểu đồ 3: Phân phối Trạng thái Chart (Chart-Status Distribution)
+
+```{r plot3_chart_status}
+status_df <- d %>%
+  group_by(region_code, chart_status) %>%
+  summarise(n = n(), .groups = "drop_last") %>%
+  mutate(
+    total = sum(n),
+    pct = round((n / total) * 100, 1),
+    label_text = paste0(n, "/", total, "\n(", pct, "%)")
+  )
+
+p3 <- ggplot(status_df, aes(x = region_code, y = n, fill = chart_status)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), alpha = 0.85, color = "black", linewidth = 0.2) +
+  geom_text(
+    aes(label = label_text),
+    position = position_dodge(width = 0.8),
+    vjust = -0.3,
+    size = 3.2
+  ) +
+  scale_fill_brewer(palette = "Set2") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Phân phối Trạng thái Quan sát Chart (Chart Status Distribution)",
+    subtitle = "OBSERVED_CHARTED vs. NOT_OBSERVED_WITH_COVERAGE vs. INCOMPLETE_COVERAGE",
+    x = "Thị trường",
+    y = "Số lượng Video",
+    fill = "Trạng thái"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top", plot.title = element_text(face = "bold"))
+
+print(p3)
+ggsave(file.path(ASSETS_DIR, "rq1_chart_status_distribution.png"), p3, width = 10, height = 5, dpi = 300)
+```
+
+---
+
+### Biểu đồ 4: Observed Chart Rate: Office vs. Rest (Tập Eligible Sample)
+
+```{r plot4_observed_rate}
+# Tính observed chart rate trên tập eligible sample x
+chart_rate_df <- x %>%
+  group_by(region_code, upload_period) %>%
+  summarise(
+    charted_count = sum(charted),
+    total_eligible = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    rate = round((charted_count / total_eligible) * 100, 2),
+    label_text = paste0(charted_count, "/", total_eligible, "\n(", rate, "%)")
+  )
+
+p4 <- ggplot(chart_rate_df, aes(x = upload_period, y = rate, fill = upload_period)) +
+  geom_bar(stat = "identity", width = 0.6, alpha = 0.85, color = "black", linewidth = 0.2) +
+  geom_text(aes(label = label_text), vjust = -0.4, size = 3.5, fontface = "bold") +
+  facet_wrap(~ region_code) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
+  labs(
+    title = "Tỷ lệ Lọt Bảng Xếp hạng (Observed Chart Rate): Office vs. Rest",
+    subtitle = "Đo lường trên tập Eligible Sample (Đạt đủ độ phủ quan sát), kèm Numerator/Denominator",
+    x = "Khung giờ Đăng tải",
+    y = "Tỷ lệ Lọt Chart (%)",
+    fill = "Khung giờ"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "none", plot.title = element_text(face = "bold"))
+
+print(p4)
+ggsave(file.path(ASSETS_DIR, "rq1_observed_chart_rate_office_vs_rest.png"), p4, width = 10, height = 5, dpi = 300)
+```
+
+---
+
+# 7. Kết luận & Khuyến nghị Phân tích
+
+1. **Chất lượng mẫu:** Cần bảo đảm theo dõi tỷ lệ `INCOMPLETE_COVERAGE`. Nếu tỷ lệ này cao do laptop thường xuyên tắt, mẫu `Eligible RQ1` sẽ bị co hẹp dù `Global Unique` đạt 100.000.
+2. **Numerator/Denominator:** Trong các bảng báo cáo và slide thuyết trình, luôn đính kèm cặp $k / N$ cùng với tỷ lệ % để người nghe đánh giá được độ tin cậy của mẫu.

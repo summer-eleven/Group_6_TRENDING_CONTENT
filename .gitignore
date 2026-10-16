@@ -228,3 +228,28 @@ logs/
 
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+.Rproj.user
+
+# RStudio local state
+.RData
+.Rhistory
+.Rproj.user/
+
+# Local dataset backups
+data/processed/backups/
+
+# Generated raw data
+data/raw/chart_monitor/
+data/raw/comments/
+data/raw/playlist_discovery/
+data/raw/rolling_cohorts/
+data/raw/unique_refresh/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local secrets
+.env
+.env.*
+!.env.example
