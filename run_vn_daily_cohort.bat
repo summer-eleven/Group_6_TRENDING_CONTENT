@@ -20,7 +20,8 @@ if errorlevel 1 (
 
 REM Daily discovery, snapshot T0, and sync
 
-uv run python -m src.ingestion.run_daily_cohort --region VN --target-new 1000 --max-channels 400 --max-per-channel 10 --discovery-max-requests 450 --apply >> logs\vn_daily_cohort.log 2>&1
+
+uv run python -m src.ingestion.run_daily_cohort --region VN --target-new 2000 --max-channels 600 --max-per-channel 10 --discovery-max-requests 650 --details-max-requests 60 --apply >> logs\vn_daily_cohort.log 2>&1
 
 set "EXIT_CODE=%ERRORLEVEL%"
 
