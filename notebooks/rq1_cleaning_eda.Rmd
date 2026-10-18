@@ -87,14 +87,15 @@ cat("Số dòng đọc được:", nrow(raw_df), "\n")
 
 # 4. Chuẩn hóa Schema & Feature Engineering (Mục 14 & Mục 18)
 
-Thực hiện chuẩn hóa các trường:
-- `local_upload_hour`: Giờ địa phương sau khi chuyển đổi timezone (JP = UTC+9, VN = UTC+7, US = UTC-4/-5).
-- `upload_period`: `Office` (09:00 - 17:00) vs. `Rest`.
-- `chart_status`: `OBSERVED_CHARTED`, `NOT_OBSERVED_WITH_COVERAGE`, `INCOMPLETE_COVERAGE`.
-
 ```{r feature_engineering}
 clean_rq1_data <- function(df) {
   if (nrow(df) == 0) return(df)
+  
+  # Khởi tạo an toàn các cột nếu chưa có sẵn trong file gốc
+  if (!"chart_coverage_ratio" %in% names(df)) df$chart_coverage_ratio <- 1.0
+  if (!"is_trending" %in% names(df)) df$is_trending <- 0L
+  if (!"trending_rank" %in% names(df)) df$trending_rank <- NA_integer_
+  if (!"video_available" %in% names(df)) df$video_available <- TRUE
   
   df %>%
     mutate(
@@ -117,18 +118,8 @@ clean_rq1_data <- function(df) {
         "Rest"
       ),
       
-      # Gán cờ độ phủ chart
-      chart_coverage_ratio = if_else(
-        rep("chart_coverage_ratio" %in% names(df), n()),
-        as.numeric(df$chart_coverage_ratio),
-        1.0
-      ),
-      
-      is_trending_num = if_else(
-        rep("is_trending" %in% names(df), n()),
-        as.integer(df$is_trending),
-        0L
-      ),
+      chart_coverage_ratio = as.numeric(chart_coverage_ratio),
+      is_trending_num = as.integer(is_trending),
       
       # Nhãn chart_status chuẩn mực theo quy ước nhóm
       chart_status = case_when(
@@ -137,11 +128,7 @@ clean_rq1_data <- function(df) {
         TRUE ~ "INCOMPLETE_COVERAGE"
       ),
       
-      best_rank = if_else(
-        rep("trending_rank" %in% names(df), n()),
-        as.integer(df$trending_rank),
-        NA_integer_
-      )
+      best_rank = as.integer(trending_rank)
     )
 }
 
@@ -288,7 +275,6 @@ ggsave(file.path(ASSETS_DIR, "rq1_chart_status_distribution.png"), p3, width = 1
 ### Biểu đồ 4: Observed Chart Rate: Office vs. Rest (Tập Eligible Sample)
 
 ```{r plot4_observed_rate}
-# Tính observed chart rate trên tập eligible sample x
 chart_rate_df <- x %>%
   group_by(region_code, upload_period) %>%
   summarise(
@@ -322,20 +308,7 @@ ggsave(file.path(ASSETS_DIR, "rq1_observed_chart_rate_office_vs_rest.png"), p4, 
 
 ---
 
-# 7. Kết luận & Khuyến nghị Phân tích
-
-1. **Chất lượng mẫu:** Cần bảo đảm theo dõi tỷ lệ `INCOMPLETE_COVERAGE`. Nếu tỷ lệ này cao do laptop thường xuyên tắt, mẫu `Eligible RQ1` sẽ bị co hẹp dù `Global Unique` đạt 100.000.
-2. **Numerator/Denominator:** Trong các bảng báo cáo và slide thuyết trình, luôn đính kèm cặp $k / N$ cùng với tỷ lệ % để người nghe đánh giá được độ tin cậy của mẫu.
-
----
-
-# 8. Kiểm định Giả thuyết RQ1 theo Thị trường (Nhiệm vụ HA4)
-
-**Hệ giả thuyết thống kê:**
-- **$H_0$ (Null Hypothesis):** Trong phạm vi dữ liệu chart quan sát hợp lệ, không có mối liên hệ giữa khung giờ đăng tải (`Office` vs `Rest`) và xác suất video lọt vào bảng xếp hạng thịnh hành.
-- **$H_1$ (Alternative Hypothesis):** Có mối liên hệ giữa khung giờ đăng tải và xác suất lọt bảng xếp hạng thịnh hành.
-
-> **Quy tắc bắt buộc:** So sánh riêng từng thị trường (`VN`, `US`, `JP`); **không áp dụng chung một $p$-value cho cả 3 nước** rồi đưa ra kết luận đồng nhất. Nếu tần số kỳ vọng nhỏ hơn 5 thì dùng Fisher's Exact Test, ngược lại dùng Pearson's Chi-square.
+# 7. Kiểm định Giả thuyết RQ1 theo Thị trường (Nhiệm vụ HA4)
 
 ```{r hypothesis_testing}
 REGIONS_LIST <- c("VN", "US", "JP")
@@ -364,7 +337,6 @@ for (reg in REGIONS_LIST) {
       print(test_result)
     }
     
-    # Giải thích ý nghĩa p-value
     cat("\n[Giải thích Thống kê]:\n")
     if (test_result$p.value < 0.05) {
       cat("p-value =", round(test_result$p.value, 5), "< 0.05: Bác bỏ H0 ở mức ý nghĩa 5%.\n")
