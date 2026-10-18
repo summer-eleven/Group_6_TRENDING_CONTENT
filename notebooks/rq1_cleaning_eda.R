@@ -134,3 +134,27 @@ p4 <- ggplot(chart_rate_df, aes(x = upload_period, y = rate, fill = upload_perio
 ggsave(file.path(ASSETS_DIR, "rq1_observed_chart_rate_office_vs_rest.png"), p4, width = 10, height = 5, dpi = 300)
 
 message("Hoan tat! Tat ca bieu do da duoc luu vao: ", ASSETS_DIR)
+
+# ==============================================================================
+# 7. Kiem dinh Gia thuyet RQ1 theo tung Thi truong (Nhiem vu HA4)
+# ==============================================================================
+message("\n=== KIEM DINH GIA THUYET RQ1 (CHI-SQUARE / FISHER) ===")
+
+for (reg in c("VN", "US", "JP")) {
+  message("\n--- Kiem dinh thi truong: ", reg, " ---")
+  a <- subset(x, region_code == reg & upload_period %in% c("Office", "Rest"))
+  t <- table(a$upload_period, a$charted)
+  print(t)
+  if (all(dim(t) == c(2, 2))) {
+    expected <- suppressWarnings(chisq.test(t)$expected)
+    if (any(expected < 5)) {
+      message("-> Co tan so ky vong < 5: Su dung Fisher's Exact Test:")
+      print(fisher.test(t))
+    } else {
+      message("-> Su dung Pearson Chi-square Test:")
+      print(chisq.test(t, correct = FALSE))
+    }
+  } else {
+    message("Chua du bien thien 2x2 cho thi truong: ", reg)
+  }
+}
