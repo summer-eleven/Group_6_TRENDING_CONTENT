@@ -1,5 +1,5 @@
 ﻿# ==============================================================================
-# RQ1 Data Cleaning & Exploratory Data Analysis Script (HA2 & HA3)
+# RQ1 Data Cleaning & Exploratory Data Analysis Script (HA2 & HA3 & HA4)
 # Rolling Cohort 24h & 7-Day Chart Observation Window (VN, US, JP)
 # Member: Hà - Group 6 (ADY201m)
 # ==============================================================================
@@ -30,6 +30,11 @@ message("Doc thanh cong: ", nrow(raw_df), " ban ghi.")
 
 # 3. Chuan hoa Schema & Feature Engineering (Muc 14)
 clean_rq1_data <- function(df) {
+  if (!"chart_coverage_ratio" %in% names(df)) df$chart_coverage_ratio <- 1.0
+  if (!"is_trending" %in% names(df)) df$is_trending <- 0L
+  if (!"trending_rank" %in% names(df)) df$trending_rank <- NA_integer_
+  if (!"video_available" %in% names(df)) df$video_available <- TRUE
+
   df %>%
     mutate(
       pub_utc = ymd_hms(published_at, quiet = TRUE),
@@ -41,14 +46,14 @@ clean_rq1_data <- function(df) {
       ),
       local_upload_hour = hour(local_published_at),
       upload_period = if_else(local_upload_hour >= 9 & local_upload_hour < 17, "Office", "Rest"),
-      chart_coverage_ratio = if_else(rep("chart_coverage_ratio" %in% names(df), n()), as.numeric(df$chart_coverage_ratio), 1.0),
-      is_trending_num = if_else(rep("is_trending" %in% names(df), n()), as.integer(df$is_trending), 0L),
+      chart_coverage_ratio = as.numeric(chart_coverage_ratio),
+      is_trending_num = as.integer(is_trending),
       chart_status = case_when(
         is_trending_num == 1 ~ "OBSERVED_CHARTED",
         chart_coverage_ratio >= 0.70 ~ "NOT_OBSERVED_WITH_COVERAGE",
         TRUE ~ "INCOMPLETE_COVERAGE"
       ),
-      best_rank = if_else(rep("trending_rank" %in% names(df), n()), as.integer(df$trending_rank), NA_integer_)
+      best_rank = as.integer(trending_rank)
     )
 }
 
@@ -68,7 +73,6 @@ print(table(d$region_code, useNA = "ifany"))
 message("--- PHAN PHOI THEO CHART STATUS ---")
 print(table(d$chart_status, useNA = "ifany"))
 
-# Primary sample requires explicit completed-coverage labeling
 x <- subset(d, chart_status %in% c("OBSERVED_CHARTED", "NOT_OBSERVED_WITH_COVERAGE"))
 x$charted <- as.integer(x$chart_status == "OBSERVED_CHARTED")
 
@@ -82,7 +86,6 @@ message("Global unique video_id (Muc tieu >= 100k): ", global_unique)
 message("Eligible RQ1 sample (Du do phu quan sat): ", eligible_count)
 
 # 5. Ve va luu bieu do (Muc 19 & Muc 20)
-# Bieu do 1: Upload hour by region
 p1 <- ggplot(d, aes(x = local_upload_hour, fill = region_code)) +
   geom_bar(position = "dodge", alpha = 0.85, color = "black", linewidth = 0.2) +
   scale_x_continuous(breaks = 0:23) +
@@ -90,7 +93,6 @@ p1 <- ggplot(d, aes(x = local_upload_hour, fill = region_code)) +
   theme_minimal()
 ggsave(file.path(ASSETS_DIR, "rq1_upload_hour_by_region.png"), p1, width = 10, height = 5, dpi = 300)
 
-# Bieu do 2: Office vs Rest distribution with numerator/denominator
 period_df <- d %>%
   group_by(region_code, upload_period) %>%
   summarise(n = n(), .groups = "drop_last") %>%
@@ -104,7 +106,6 @@ p2 <- ggplot(period_df, aes(x = region_code, y = n, fill = upload_period)) +
   theme_minimal()
 ggsave(file.path(ASSETS_DIR, "rq1_office_rest_distribution.png"), p2, width = 9, height = 5, dpi = 300)
 
-# Bieu do 3: Chart status distribution
 status_df <- d %>%
   group_by(region_code, chart_status) %>%
   summarise(n = n(), .groups = "drop_last") %>%
@@ -118,7 +119,6 @@ p3 <- ggplot(status_df, aes(x = region_code, y = n, fill = chart_status)) +
   theme_minimal()
 ggsave(file.path(ASSETS_DIR, "rq1_chart_status_distribution.png"), p3, width = 10, height = 5, dpi = 300)
 
-# Bieu do 4: Observed chart rate (Office vs Rest tren tap eligible)
 chart_rate_df <- x %>%
   group_by(region_code, upload_period) %>%
   summarise(charted_count = sum(charted), total_eligible = n(), .groups = "drop") %>%
@@ -133,4 +133,23 @@ p4 <- ggplot(chart_rate_df, aes(x = upload_period, y = rate, fill = upload_perio
   theme_minimal()
 ggsave(file.path(ASSETS_DIR, "rq1_observed_chart_rate_office_vs_rest.png"), p4, width = 10, height = 5, dpi = 300)
 
-message("Hoan tat! Tat ca bieu do da duoc luu vao: ", ASSETS_DIR)
+# 6. Kiem dinh Gia thuyet RQ1 (Nhiem vu HA4)
+for (reg in c("VN", "US", "JP")) {
+  message("\n--- Kiem dinh thi truong: ", reg, " ---")
+  a <- subset(x, region_code == reg & upload_period %in% c("Office", "Rest"))
+  t <- table(a$upload_period, a$charted)
+  print(t)
+  if (all(dim(t) == c(2, 2))) {
+    expected <- suppressWarnings(chisq.test(t)$expected)
+    if (any(expected < 5)) {
+      message("-> Co tan so ky vong < 5: Su dung Fisher's Exact Test:")
+      print(fisher.test(t))
+    } else {
+      message("-> Su dung Pearson Chi-square Test:")
+      print(chisq.test(t, correct = FALSE))
+    }
+  } else {
+    message("Chua du bien thien 2x2 cho thi truong: ", reg)
+  }
+}
+message("Hoan tat!")
