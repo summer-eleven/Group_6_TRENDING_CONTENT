@@ -1,0 +1,3 @@
+﻿source,path,rows,valid_rows,distinct_ids,blank_ids,invalid_ids,duplicate_rows_within_source
+master,data\processed\youtube_dataset_2000_clean.csv,2411,2411,2411,0,0,0
+registry:VN,data\processed\youtube_cohort_registry_VN.csv,7682,7682,7682,0,0,0
