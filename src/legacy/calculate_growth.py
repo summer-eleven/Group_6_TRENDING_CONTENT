@@ -32,9 +32,6 @@ TRENDING_OUTPUT_PATH = Path(
 HOURLY_MIN = 0.75
 HOURLY_MAX = 1.25
 
-# ---------------------------------------------------------------------------
-# Load & type conversion
-# ---------------------------------------------------------------------------
 df = pd.read_csv(INPUT_PATH)
 
 df["collected_at"] = pd.to_datetime(
@@ -50,9 +47,7 @@ df = df.sort_values(
     by=["video_id", "region_code", "collected_at"]
 ).reset_index(drop=True)
 
-# ---------------------------------------------------------------------------
-# Deltas between consecutive snapshots (per video + region)
-# ---------------------------------------------------------------------------
+
 grouped = df.groupby(["video_id", "region_code"], sort=False)
 
 df["previous_collected_at"] = grouped["collected_at"].shift(1)
@@ -73,12 +68,12 @@ df["previous_comment_count"] = grouped["comment_count"].shift(1)
 
 valid_interval = df["hours_elapsed"] > 0
 
-# Absolute growth per hour
+
 df["views_per_hour"] = (df["view_delta"] / df["hours_elapsed"]).where(valid_interval)
 df["likes_per_hour"] = (df["like_delta"] / df["hours_elapsed"]).where(valid_interval)
 df["comments_per_hour"] = (df["comment_delta"] / df["hours_elapsed"]).where(valid_interval)
 
-# Relative growth (% per hour) requires previous count > 0
+
 for metric in ["view", "like", "comment"]:
     valid = valid_interval & (df[f"previous_{metric}_count"] > 0)
     df[f"{metric}_growth_pct_per_hour"] = (
@@ -89,9 +84,7 @@ for metric in ["view", "like", "comment"]:
 
 df["is_hourly_interval"] = df["hours_elapsed"].between(HOURLY_MIN, HOURLY_MAX)
 
-# ---------------------------------------------------------------------------
-# Latest hourly snapshot for the chosen region
-# ---------------------------------------------------------------------------
+
 region_df = df[df["region_code"] == REGION]
 
 if region_df.empty:
@@ -123,9 +116,7 @@ latest_hourly = latest_hourly[
     latest_hourly["collected_at"] == latest_hourly_time
 ].copy()
 
-# ---------------------------------------------------------------------------
-# Percentile signals -> viral score
-# ---------------------------------------------------------------------------
+
 score_columns = [
     "views_per_hour",
     "view_growth_pct_per_hour",
