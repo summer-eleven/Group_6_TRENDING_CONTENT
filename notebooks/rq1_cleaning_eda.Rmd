@@ -1,4 +1,4 @@
-﻿---
+---
 title: "RQ1 Data Cleaning & Exploratory Data Analysis"
 subtitle: "Rolling Cohort 24h & 7-Day Chart Observation Window (VN, US, JP)"
 author: "Hà - Group 6 (ADY201m)"

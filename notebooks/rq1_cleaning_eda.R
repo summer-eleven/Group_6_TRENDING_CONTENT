@@ -1,4 +1,4 @@
-﻿# ==============================================================================
+# ==============================================================================
 # RQ1 Data Cleaning & Exploratory Data Analysis Script (HA2 & HA3 & HA4)
 # Rolling Cohort 24h & 7-Day Chart Observation Window (VN, US, JP)
 # Member: Hà - Group 6 (ADY201m)
