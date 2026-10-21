@@ -1,0 +1,19 @@
+{
+  "region": "US",
+  "version": "v20261021_76eaf2ab",
+  "rows_total": 2040,
+  "rows_supervised": 1,
+  "positives": 1,
+  "negatives": 0,
+  "label_status_counts": {
+    "UNKNOWN_INCOMPLETE_COVERAGE": 2038,
+    "OBSERVED_POSITIVE": 2
+  },
+  "unknown_excluded": 2038,
+  "include_non_fresh": false,
+  "blocker": "Thieu lop hop le cho phan loai nhi phan (positives=1, negatives=0). Bao Ha: can chart coverage 24h day du de co nhan 0 hop le. KHONG gan 0 tu UNKNOWN.",
+  "inputs": [
+    "data\\processed\\rq1_youtube_cohort_US.csv",
+    "data\\processed\\youtube_cohort_registry_US.csv"
+  ]
+}

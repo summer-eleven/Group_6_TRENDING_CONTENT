@@ -1,0 +1,5585 @@
+{
+  "region_seed": "US",
+  "generated_at_utc": "2026-10-21T08:04:31.848128+00:00",
+  "api_stats": {
+    "requests": 14,
+    "category_errors": {
+      "19": "YouTube videos HTTP 404: Requested entity was not found.",
+      "27": "YouTube videos HTTP 404: Requested entity was not found."
+    }
+  },
+  "known_master_channels": 1570,
+  "raw_rows": 1145,
+  "new_unique_channels": 751,
+  "seeds": [
+    {
+      "channel_id": "UC-2Y8dQb0S6DtpxNgAKoJKA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-8zLYB2DB1fFCP3KJxe0Sg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-9QiiVaViuqMhLp1XEwdxA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-H7-DzXCgWGqDpNp_M1wpg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-okH-Ne2nm3ZRP4IPR3atA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-xlbELlElmSuioJ3hK7EqA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC__WzGR5KbWuuMGXvWbt3qg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_8KAtg4GobLC0VTDTmEipw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_dslIyEBtgR-di_dnZ4Nog",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_ODNEPbkVolMCWSjchNdfA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_TYFButglZuuDbD-0Q_IzQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC04tiq0fOxT_ALRWz-iaNow",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0j1MpbiTFHYrUjOTwifW_w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0KAFLxIiaR_FFNYDL3utGw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0mFRQ_goQXWhhfDGz4KWgQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0NwzCHb8Fg89eTB5eYX17Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0PhPZd-XhjJ__jMowbLeeA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0PMQXAwF6O6aeTpv962miA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1-y5JVeMFkvf1ku_kFumyA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC11dBt40lI5e96LaRBfxvxg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC14JqA-BgcbceUJT0ytBURQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC152a2OT8HVQC-cGcq28y0g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1bwliGvJogr7cWK0nT2Eag",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1e6iW4ojbhn0gUCyvjawKg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1GJ5aeqpEWklMBQ3oXrPQQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1JI3HMg-1m3aAgbxixGZRw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1n_yB_W-FZCbwajZPcs8Jw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1uTha1aiEIgyigwBwRIARQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1uv2Oq6kNxgATlCiez59hw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC21x3ZFz_qlyVs_Xrvbi61Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC24mcJ1pow5eqFao5vKR-iA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2Gu2D6VkeVYwXA8wnLvSwg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2PcEPhxydGmXaAhd3pAwuA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2QsOjgsUgvfoJ5bQl4wedA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2uQvUg3YYzoOtj1yZLT0Ow",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC36MGPfPwOWafAXauiV4LdA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3D6Pg1jDIrhrZgA89P9Cfg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3IZKseVpdzPSBaWxBxundA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3mG1jxWYgBoJwSaJrke3YQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3nPaf5MeeDTHA2JN7clidg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3ROLz2rGWv24cx4tQVAq8w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3RYNOKIpKE_2P-5ZapWIYg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3uOXQfZsAU2NMrZxraw5Aw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3ZhM0fDxU9bqqlwWRMHwuw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4avs5jYd_FvzQ8f0XYziqw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4qdHN4zHhd4VvNy3zNgXPA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4TP_rKc6AYFC3gbD1VS90w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4WRFyVepKkXbBW7rFxKdIw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4XmrqqvjmEcuTYtmQ-Ldpg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4xyf_Z-pEQOTaRVyjXfA1g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4Z78mWMtyeHN8EjBbgufNw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC53jlmW227JD6fiGCP3TRzw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC55HQXkPybptGkfRfniM77g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5aATYG-mEny8VBUzf2TIjQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5enhS5tdXhHNbj8s_kdBUw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5ig0ubThGbS1sVlexAQySw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5J5VOhxWs7RcloioZyVKsg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5kiW7ynDHWpr3evLC_IdvA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5nJPJLD9l1TAI1H4ZPWzBw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5Pi8DHUItNgbGVhjh4kVgQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5zdzfva606wZhIr31piU1g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5Zfb5euukpTgHW7OWv13nw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6889KWo5GDEqcYaym1lq9g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6AhuKHE0b2SdAnPUFpmFJQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6BOGC2EEBgjp4vS_S7PQ2g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6LBo0GXFaUtf-mWccqfw-w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6MfFxrAK-e4HcgJROvDJDg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6QVCsU56eYp7DQt9AL_3Tw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6R90HkGwzr9ZTWBAf3RnRA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6rh8LB2fg1BB2qq6u5Zm6Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6VcWc1rAoWdBCM0JxrRQ3A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7-hR5EfgpM6oHfiGDkxfMA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7_YxT-KID8kRbqZo7MyscQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC74bTyvlSBpPnHPrRC6QkhA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7GApnxF9MLVSetx4FrPBKA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7llV6PgcR3-4PxntePs9eg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7NoLRTlRnaoGQM2COEU_Ow",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7TIkH-0TzhP1EmSD9QN3xw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7trU46U_9XPDtMnDbiDPUQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7wBEJg8e-FlC-0tcIIfSIg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7WQH4kpgxXJYHp8r9IAO-Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7Wyuc7HQXbC70GGqVLl9mQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8CX0LD98EDXl4UYX1MDCXg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8FHFLWe9KkG0eoxPMIgcpg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8FnJrfl4OeqtunWP38v2tg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8G7ho788Yj4e79N0M1qoyg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8qNcrcCOpYIsWWwkX9mDGQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8Tnge4FnB6rTrX1vHVfrQw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8uDq60PstVf56UwH6qfMAA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8yeB4B8ChggnUchlmWB8Lg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9FkeEFIGd9FXRfxpTltXYA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9HlWVtENbiMQzVRmnbJxtw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9n0bFMw6qvX6CdLCDbbCkg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9OucCej3Rx7tS3O7df4ReA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9OVW0DWrAc7D6NGURzHgBA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9OZkS1Mhl5UvKSiPrYqsxg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9p_lqQ0FEDz327Vgf5JwqA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCA2sMhX7_2RNFVXeaZ9Hyzw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCA5RGaQc-a8tIX_AqTTmWdw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAbaiKvP8kZfY706loT4ivg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCABvFYqMASzeQL_Wx4N_TLA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaEFegr3Rcs430VZWEoNstw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaIDWYTopA7o0fCfHGoS4TQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaO6TYtlC8U5ttz62hTrZgg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaPSTO-Cz2o1o30nmqihWmA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAruFBYLugQOEkhy-Kh6ZiQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaSgsFdGbwjfdawl3rOXiwQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAtmNvxD7eOs_kwxm-zzoMQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCazGXY2n0PTPZ3t7D20d_4A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCB_MFUt9-0EmGhyx-H74XFw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCb25iH2DeU7LXllXfo6Jgxw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCB2ahU2xIXD1Emto8sBNOow",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbE6TtMNc62m7d20j9tdeVw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbhkfMLcRk6ftmQuwnFEIqQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbJafUpNsAoNNoWKeV9xD1Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBKMcGDiluE_Nhep-U3sVrA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbLj9QP9FAaHs_647QckGtg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBODyKF0JMbUd6D9Bklyzbw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBoPMDqg57i0dPLu3hrN9Hw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBR8-60-B28hp2BmDPdntcQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBrMq7wkdPWb3PxR-GUR61A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbTsb893rochfiVVtMPdkYw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbulh9WdLtEXiooRcYK7SWw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBXOFnNTULFaAnj24PAeblg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbzEOGSh4-xCvAcvAQUOcHQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCdGD0HExcSYnVTmwTMguEw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCdM7Zk1l93Z-7_krglTI1A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcfLtz8uK_iK3CRGzoLHEtw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCchBatdUMZoMfJ3rIzgV84g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcHHkJ98eSfa5aj0mdTwwLQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcIKDdClybN7AWT4OHcMWzQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcjIvuxmWlS5IEQ0JdPV4Ng",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcJL2ld6kxy_nuV1u7PVQ0g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcoQmP00fejfgYaaqTTtUHA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCR3xZ8j5Zc0UOgUGB0D6-w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCsNkIloRVAF5kxTxORaYTg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCVWvf_e5oRb6RfXyluR7UA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcwcJT8pVnq5MIDuNfca38Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCY0PEQgZbhXm6-0WHiHJEw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcya9e_wl9ql44-Ee3AETkg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCD_4DgHwrNDp63NDfqXaHJQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCd_Iqrz2SjW9uLn69Yr2uWg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDB1S6gqvv0wfPoqlX8ubGA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDFwz_ELGTSM8J68tYgmjDQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDhz7pDsmSL-5TjuB3zmlWQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdjx530TfbEBB2932AGpiZw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDkBcQe24vjh2xLXlmB1WlA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdKdP4tiGCtI3b8biYQNs9w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDO__Z-tZD4bfG9m4AkK_uA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDsMKIpr1ZHXHpACszKpRUw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDsvjvBRosWw8F5eynK0HTQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDvm7YoLE5r3ZZ6MWyD2vGQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDwU40UxbUqcfeRitQN5dHA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDY_saaWG2aB_E4Rvv0iEeA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdyqAaZDKHXg4Ahi7VENThQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCe4LM_eKc9ywRmVuBm5pjQg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCE5mQnNl8Q4H2qcv4ikaXeA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCE8KKL0rUeAUebhbf4aIJ2g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCedwIM6dmZy-f90HTzE1P-g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeePGrzBN3B2GurSkd_bwPQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEG4fd9DERXPzziMo3WgYMA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEGuDrveqBgD0S9nqaOPw6Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeJrNG2hNE-W4N6CueIFyLQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCejYdfKBG9ss7sGRcKoq7GA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCelFGaXsgRJMSG8aXqzgG7g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCElGBUWDCa05jRzc2PfmGqQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeoJb2SjcLWHGZWfiD9sM-w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeoZXkaJDtdTHafgoZeDcAA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeP4Yv3s4RvS0-6d9OInRMw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEpFoWeCMCo5z3EvWaz6hQQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEs5MQjXJq27-X2vgdwtYDw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCESiRVMacmdsijiOtKvOeKQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCETZ7OiW7-wqwb-6hsz3C4w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEw4gExCX4SWq-dwhakHbUQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEWBJQw3hSvkLFmZZqBCX-w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCf-vV5woXPFpkvZKwooWoyw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCF2T5SJP8fKB7eubgvwEDxg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCf6J9yokPS0ys456jvjLBGQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfCQLMC4L4oB0sUlYZhaYjQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFctpiB_Hnlk3ejWfHqSm6Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfgNYwEzTKf-70SXPgPSYkA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfIyiyoDfU5JZxBebPyxjiA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFk1RUVRoxuDaZ7UloSpCzA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfN7V83qF6LaUZ3E0SFRa3Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFSnAipx-2xRlR-209Rz5cA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfV-uR6HJDUtKIE8gACgQNQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFWvjciTxjrOJeuoKX012tQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCg-e04O2EHuoIq2sLNJ9JoA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCG1acfc735_BPZMEZjuW1Jg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCG5_ENrBMOXHDL1LM6_WzLg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGa_1uanLCDTDdQun1NhrLg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCgbsRLlukQ21Zzu4LYPrDBw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCgewignMTv1bbiJ3HKcvCpg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCgGX6OD_xd0e5oY7L2oGSUw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGhs9S33RAeT5DEuKTO4Oew",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCgIOaBJD7k7NiiLxxmahkCA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGIY_O-8vW4rfX98KlMkvRg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGrRpiIVL_r4ASsGaI_JK3A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGWold-_31XcfRvZgykoKqQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCH-6Htnma6gIAfTh9HYhenA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCH_7doiCkWeq0v3ycWE5lDw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCh5mLn90vUaB1PbRRx_AiaA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChbQpxORq06uf2Wnj6yqKiQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHCwb6dKt4534vxX3F9OHKQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHdMK5Ef2El8KbD3L_WgANg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHGfCFUQ8nSLR0lL4tKuWjw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChgfQBAX2k7WjfVo9JfDhfA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChIs72whgZI9w6d6FhwGGHA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChK0KzE7fazKdo4IfLBk9RQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHlTEt24Yb4ylJFuWz7hXIw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChn8VyaLhr17Cj9c8DwJajw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHOjus2xFrvo9ORfw3aHLWg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChoPejdaVo_Z-YJaMFvm8kw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHudxWzwLDAr06TWFmrP7hQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChwh1KpZf0Y5KsmaCCMSt6A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChWHDyOrfyXJV1jMSwCasSA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChX76aZbAkJBdQQ2iAm-GQg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCi-QR0jFereBXjU9SBxcdeg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCI1-J45WXprOQQ_m9pmfW9A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCi37K5Nrz9HlgNLsFBfhE-Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCI4aITQ3nx1QR_8RxFlPjRQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCi4oaPnysjad4Vb5G_8SkFg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIa6iQD0ecZols-CUuMdNAw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiAInBL9kUzz1XRxk66v-gw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIcGc8tDHYZ3vY3NcS8JXaQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIF9yl0OE-Lcpy8414kHrcA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIfAvpeIWGHb0duCkMkmm2Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiJfiEg1FImWsVuEu0L8X6Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiP_FwGyJQ_6P8k5ON5mncQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiufyZv8iRPTafTw0D4CvnQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIVrwudKiOJfM5B6dUH4qPQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiZVMOinTQGb8HQu53VbV4Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCj4zC1Hfj-uc90FUXzRamNw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCJ6nMHaJPZvsJ-HmUmj1SeA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCj929zzQbCYGBAUX0Tod4Eg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjaTEZ1QctJnxL6YCQCpUMg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCJf1vgH-DyFff0oC9UOosIA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjFaPUcJU1vwk193mnW_w1w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCJnH5Ph5O1EZhKiKiNgH9IA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCJs40pY0CoM0t8nDX8pFP8A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjZ8RfzPeKm2lqvYR3GJ-pA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCk_YaS7EjbnUe6r_1colvlA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCK1GSLc4_inBgF4Q_h9-wrg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCk6rDUUEeguelRc1Q1KH4uw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKGNVB2moP-zeAWPmw8HvAA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKn72wsF89-DxlA1jlq_fUA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKqqDlf6lfo3ChRA4-gzusQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCksiqtuWYtN2YluvAQnV2dQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKv8Rrrdc9oxLJmdHItafLA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLAtfKGLCgyO5_-_NnTke8g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClbllR4Tx-lhYJyrpu1sA4A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLc_ZQgQ8h2XKUAQpqcvIdw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLdPUOIBv-O0mTWtUBaQNtg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLM1eE8w_DZ89n4yIxVbffA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLnar-aS8iHa2ldj1w_pgJQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClOf1XXinvZsy4wKPAkro2A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClOGLGPOqlAiLmOvXW5lKbw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClS0wn3LPs9jdX_yt2g1k8w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClu2e7S8atp6tG2galK9hgg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClWBvmriAFpqxngoC7DPhJg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClWM_bzyb0eTb9trqAthRpg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLXWq21bklTO4nIe9i7DJ8w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCMaGRL-UnufF-eIcPObFdXQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmiCK8aqFP3Fx4-SHWKZLsA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCMiOWDKN0wNKHQ4rzGAp6ig",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCML6vMJHDhC_FpDhJFr5aZw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmp5y07YIV6i2jPX4x82hVQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmr_vYKbp98f6kdRoer0iVw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCMvJjqVlkSJ9x8hJwcfw4nQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmXH6CX_juGwNFTj3PESdoA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmY6t25uVbXIDTizjfLBI4Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmYY3o4EH-tPqxKosY8A_1Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCn7dB9UMTBDjKtEKBy_XISw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNApqoVYJbYSrni4YsbXzyQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnEXyobk4RegTkyU0BelI5Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNM7NxaErcq9FJ1u6z9byag",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNQ3WMvrKDeKq0iDVY7QYwQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnQC_XGCCI__qrxwgZS27-A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnUAyD4t2LkvW68YrDh7fDg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnuf06xsaSO8f2svzMENyBw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnvomMMd-xUZRiliE4CDuLw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnyP4sbJVIU9JqHz4l6oQZw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCO_w8nCYegO_gXnsT_MjtQg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCO1ITICo8MLHGAXR1uzFwjA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCO6WH0KLNGJiMIGg1gMI9_g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCo8F0MWDvuVK21VMC2PHcZQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOa6zgAg07RodxHMk40omdA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCofK-jm2oG6GqkYp7Vw3U6g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOfyvsftRqM5yyqpT392b4A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOgaIuQYGr6ow_jbote4BKA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCoGIPQ7M4NWai7LRgRhaSOg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCoIXnB865l9Ex9zs4OIXTdQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCoJCN_MRNfEhjA3a3XIkliQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOK1jLhG52WCXa2c3WIhSCg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCooVYzDxdwTtGYAkcPmOgOw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOpcACMWblDls9Z6GERVi1A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOSJVk71utzoCmRxzcfhM-A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCoYAHn6JaPWFcoRSYevj9Kw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCoZd2JMZpzzudNYtUhEV_Ng",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPbGiUt4Yu8EsaFM-KAmgjg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpgi6wIZv7c6TlAY-d1PMuw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpHCfDBZ3AJyuofz6DHy-ew",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPj91DXSfoMKXPjrMBidS1g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPjlEaKS5G4IO0XG-Sdb3mA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPLMPHT-d8GZOqL_AHJFdQQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpLT1Stf-JH2O33yyZETUiA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpNRWhb5QaqtkZXMBSlSsYw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpqXJOEqGS-TCnazcHCo0rA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCprwkXd8S2ynQZxZXgyr4mg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPt6DxnlRa6TUHyCLJS14rw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPtztJqrHI-mLOgkHyzzpMg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPYZ-R5LQGMeU7QikgxmH8Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq-Fj5jknLsUf-MWSy4_brA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq-ZvpCLekNUJpD3iem0zDQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq_2n18CJaRVGxEfxtCfI-Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQ5Ssrs48yJBfOesfDqXUeA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq6VFHwMzcMXbuKyG7SQYIg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq8HxaFrV-OD9-IXREt58RQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCqA5tXN003u-18CKSICLDdg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQI5QAbS_CZ5wjUHvUlx9OQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQizaNgEgXaWeUvmoTSIsXg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQJaDHNzEw4_DewBVDFyUsQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQnZTXSn-Me7D6bmqME3osA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQoOmu6mKZkXTnwZcpD8Ciw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCqrdqFnxnZ_3TUYYK5yGi8g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQYSAAPWo_0Au63xCJ5PJVQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCr2shlifMcJEAn2dgCo4iZg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCr2xjaS7CIx1OY7hYwrXb8A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRAmLqLLNl5Oc8IIVrhUdgw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRei8TBpt4r0WPZ7MkiKmVg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrFAtxFPIyLpjbbdUbY1bLA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrfyyS0SKv_HAeP7v9qkFYA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrhAwHwM_JNn12TL7a0uiBg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRHXUZ0BxbkU2MYZgsuFgkQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrmLrOJM0nGmENZcER_LUtg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrQ1n44o-h3G4Uq7AnB9GDw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRU9vwwARx8jEACqNpi_KFA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRuNOupskvYyQITuirXvmCQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRX7UEyE8kp35mPrgC2sosA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrYo6np138Ge6iCRMgS93aQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrYrcFGGs_nke1MggS8Jvqg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCS3Iac7JbyHzuXmYj34weRw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCs3uTN9G4MnZGOfYWoSs9mA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCs4Z7eoY-IWv53pZuCM4Nvw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsA57c8OT0JfnX_yL3Ev1ZQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSfUxuKjt57Ynzct_7_mN8A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsnEJAjrwfuU7T2yYv00WsA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsS3G0h8Z9WOSD6ubFyelnA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSW20WNOFR_Ifq2qwK8QO-A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsYQxZGPAUz-QrMfaXePouQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCt4mIzU_TcllE4b0PESOOJA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCT6iAerLNE-0J1S_E97UAuQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCt9H_RpQzhxzlyBxFqrdHqA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTJBXy_CZmsMbQQeRi0NZoA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtJqaNF7McbeDB1UJZ_nWJg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTkXRDQl0luXxVQrRQvWS6w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtLjzOHbECtUYYtNIqFvfag",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTt454q-VFq6TBvt8flicmQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtu2BCnJoFGRBOuIh570QWw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtuJxthaQsitbLFKtTzJpzA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTX0E9xUdeXLfc8n9f7xR7A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtxbV-l2t708Y4tkGSn2IZg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtykdsdm9cBfh5JM8xscA0Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCu_HcRXfd9TzP8QdLnMVrjg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCU0oLTV2RO-l4uUkQVy2TvA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCU2fTtyIj4uJ0uYlQnEH3LA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCu6xqwLxixO-UidWIQzTHlg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCu7ODDeIZ4x1rJwM1LCVL8w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCU8ryU7csssYLpxAkWJ_XSQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCU9pX8hKcrx06XfOB-VQLdw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCu9sYmfPNydPJFqLLTdmxvA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCU9Vd2lRheyB374OjW7iVJg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCUbaS8OgNXpKoXKoMGttBeA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuBEdI-24bquMoP_dACignQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCudlnfkmb1LgK4tSgctPNOQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuDlTx7uSN_BkDHhLTaJ-UQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCufcqvN5lw1XlG4-4iQR6YA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCUg9oSDSr2QBbuS9z97dXag",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCulXXKKrC3LjQpxGNPNMFPA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuMJPFqazQI4SofSFEd-5zA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuNgNRHKIiudXKPbTlvh0Pw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuPivVjnfNo4mb3Oog_frZg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCupwAoVqfuUN1EeWbhNlgBA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCUvw__zQnaI_pcvMy2O0v6g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCV41-_jFZ3XC7NHV1EZsLyA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCV6mNrW8CrmWtcxWfQXy11g",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCV6UqWpQfo9bsQ7nRynpmKw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVCuxFS6_jidM73swgTs-BQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVhGR9TU1vfvHXl73uaEiEQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCvj-ql10LWeoGy0RJpgslXA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCvqRdlKsE5Q8mf8YXbdIJLw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVUsmF97x4kuhGbBjzl1nVg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCW1CGYCjfKhNLGp_Os1g_Pg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCw7FkXsC00lH2v2yB5LQoYA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCwboyKXJkCiHajQorzh-agQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWcCxrPCRDAte7I4uFdVsFQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCwiaPYufmQOq5F1TI-FzQhw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCwK3C8Vgphad4PweezfUBAQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWOA1ZGywLbqmigxE4Qlvuw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWUxsoGia86OYIbxhjg68WQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCwV_0HmQkRrTcrReaMxPeDw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWVs8Yd66FUXLy-fgaMq2cQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWX7tzz1JJVc2Usx0BRn1Cg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWzmOSSiSPbVnVu3ZAyDx2w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCx8vbgWs666cAS7wsKos5sA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXBE_QQSZueB8082ml5fslg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxCEaQ_uUv_okCK_AYg9NaA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxcQX3lLPT8ACwGKEQuwtDg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxfr3b8IuHSzu22UHnAvHWg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxgBOl_NSOut3hBgYQ7ibMw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXjbvdFyEG0IcYbGMR81Akg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXRzjdHAHw-ouHBdKg_MzGQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxsZ6NCzjU_t4YSxQLBcM5A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCy1JplVtE6QOiSUPMIY9mLg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCy83q7mKm5Urtxc-21uaKYQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCy8fj_SsFy11IE6EH5gjJtA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYDmx2Sfpnaxg488yBpZIGg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCyI5-m4U6zgAS7Kh3c4ISLg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYlsF4Ng5Ik3bvqhzRl-CIQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCyMnHssVup_wBZRnCSMVt3w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYn6CZe5UGIyPe9WJb0pTrg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYqsJbDDngvxb_rbHzHpYGA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYSrT9w_V_5wpEahYXTeXUw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYtfdbMQhzo-uIThGm0hQuQ",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCz-jVF7_acwSvt30vGJRTOw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZ6Y2lTEhghYDlSNbqjvHLg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZ8i1-pH5S2-Hc41oiOZ27w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCz9yS18zJGQObwUL_K-ICnw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCzfcDfjQ6P5leUZdxZPG6ig",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCzH3H8sRfqH3rEVZcpTV2Cw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZi0oII2ua_I-fEnHdg3U2A",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCzjF2EUojZ1hVd_JVKhbCJA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZjp01JbF-hCWlaDWi1zKbA",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCzklsfej5kE3b347YoHhpZw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZLruqw8oU3OA90ebHMMq3w",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZnEPs55HO-dakem8GSo8Aw",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZNs9DUR3ER7i1UunRTbZ1Q",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCzpCc5n9hqiVC7HhPwcIKEg",
+      "discovery_source": "chart_sql",
+      "discovery_query": "youtube_chart_entries:US",
+      "first_seen_at": "2026-10-21T08:04:27.280891+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWJtCsLtBu5XY4ovIT8jy1A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5Q7UkimicHjjB9ojyOWsJw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6bpQGnG_DaMP8_QV5-V5Lg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPhc2lyI81fM261IaScDTLA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWSYfEdQyJel63ztrJu_9Ww",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCkaMwxgMN2ne8ShfnEMYk6g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4Dmd9uWz4mibHCH5q2VmHw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRmAixUzy6Ct_JomDZKmciA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEjEWAouIqTZKdR158JQZ1g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCkJMLXPgVVRdJ2pC7lkgaBQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPb94mX2ZKs0fGLehjGLcBQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAohr44yKI-YEauASRT4RQA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPePT2nO8z-2Lh-EKBtGfNg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrlzgjrKUa3AlrfSZTBG2fg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsFIzJk-T7PTzP4iN_J8zdg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAeoHtz1Vy6nVVTJU664Vtg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHxxntAmzCI1KoyStOCPMlQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClOXTRF1m6yTYGCepDa1ejQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtjSapTgl5HdbRpVh4F9JhQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTgSurHb80c1h3kUckl2DPg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOP8G1Anq4WcxfvmY4uMxoA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDq8OrB4Mlj5vfT-a3dkGPA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8t8TwxuUNDfPndyLl1X7Mg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVtCWzGIbspjfH3rAnW2bGw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCwtFfKE_e0WArmpzo_sqRMg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC94a4nLjcExg8PquSF4LvVQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCftgvkppLhItPXtCFgDarNw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-lwECdCcPi7xP82V87RiWQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZ77HHWS_hQle6-TKp7QH6Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCybLp8ilBD6IRqzxdi1vkpw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8yS11N3YDO1I7OrXAk9_Bw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_hVMyuh8SRIGLTmp2tT3JA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZbWCodPFwH2QQn772QnUxQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnCNXsPRoPHBD2Zt0mJ4nvg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=1",
+      "category_id": "1",
+      "first_seen_at": "2026-10-21T08:04:27.968186+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGdP0S2emixv_dRuiBl3Y0A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCUszEdjFb7-rGIcNHnjJjYg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOmcA3f_RrH6b9NmcNa4tdg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsw2fxauO-LXa5R2yC7VN5Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOOAAhDVlHCj3AWfd0dGbVA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCJw8K11bWhXnYnXTZ_omU4A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq-RVyLLjV8MZuV_S9gezdA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChyH8STHI5ABFSBBvkcBEKQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCby1FCBQvCVJnhPyxEfoC4Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2a65p_EbLVB3b3oPVNWOQQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsSK9WYdLWVh_Zy4Z0zneNw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOH8Tg9x4HrwLA57qxSohzQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC880vCyurPtRZBReR2okpMQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7rsYYvQbqQrJDGhqWmtAgQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5WjFrtBdufl6CZojX3D8dQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4MQ2QuGjMNLbUZH2CFQl9Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNMUzfDYWY329ftlf25Acuw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDQfAbaj_7noic0gRWaFAgA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQkBki0UPvx4_cB7D-8Euiw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcLYOTz3ct6_lk9iLToxxAw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCqF5zhh3p3b3bvsPXkszuUg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCctjMq29ChJhADU9gIXb6Zw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXWKstVSfg2lYDtvpy5R8pQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCY5DlpdjsmXD3KKVkOyoN6g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsyymBNXptedeUl9SpAM18A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKRvzNofyhiK-OeROurmY-Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSkFHnRFPYkqybqMj9XD1HQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIwtPpoAyf_s8UfNO5zG7pQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6t_2nFRRi1bKvdTh99PsXw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVTomc35agH1SM6kCKzwW_g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTTt7XB8w4e3D7OyGOTBR1g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC87Re_9sXZzkbVJm41Hs_zQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC924EDjXmX52SHayy6Ls7mw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFMGCDS4rQprREJJa8f4F0Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKJzzWMge2eviyyfcyo-WHQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCW6GT-3qf-5KSoGRzhT1iQA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9Vi49xloTr1dz4ke3BxhAw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsxPw9PUT54LcWdrorPro8A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCA1eKcNc14rzY2yv6nWfEUw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6PZbj-I4JecBJjtFwZ_D3w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1I7kEKJD1s_ALwQ4U4OnLw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8QoxBMZB5xZY5nJJ5tkJUg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCh8f8vssLddD2PbnU3Ag_Bw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=2",
+      "category_id": "2",
+      "first_seen_at": "2026-10-21T08:04:28.362223+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcJLC91v0A0iD-CMUWdZkig",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCs7yDP7KWrh0wd_4qbDP32g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDl4z9JAB6B8zf84A27mv_Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC47-wNKFQbYDTBWcdGUGxpw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8MtL8JEv9VHEU_ICCNplPA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1b4IOVHdz77wZI437mkbew",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5vVe2R4ucoMzJP53o38Yaw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCn-SYb1TUz-1itK_uz4imUA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=10",
+      "category_id": "10",
+      "first_seen_at": "2026-10-21T08:04:28.545785+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfpjgjyL7prKAitT24e4OxA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSCHeHDt1DUuVU1_U0MHdbg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCA988H0Mf_UHzh7PRt1m7Kg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHuqJe_sZz-Tl6vW3I5N5Qg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClGB-MhQf2bmsfVsfNSF8Qw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjMQ5Yfpc5AdLKl53zc42tg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZzKJQVrbR6XcMFnhsIKSDQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFNcY_a-jIigMo1DAjKqEfQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVQuQk8KeXOHByBHQICmStQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVP4f0KZAk9AubEVTyTKV-Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKSRz0GevsN30HDaz-ExKtw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1hFp29gf0cOvcQkqxsEJbg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1jye2Z_MTCVUySI0U-IOxQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_NhJlZOgfz09jA1QxY1S6Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaELs8oQy816xO_7vQiNoqA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGSXjgDSffC7L6i6EEVUXiQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSeT7EczfIOsruK0Q3BGToQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHLwRRSa9g9ZkPLfNWbDZxw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3S0W8Dq-ldW5iFWm5_7fdA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3yXq9Wo1pCgeEU4xZNcsDQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYXvMY2E0s_yBJ1Ywuagwbg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWn6ggYQhphJkgotIMa9rAg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6wMMhzk4PbP_jBSMu8Mv7Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRb11jvIchbhPyvrplchr2A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpDMnr3rXD3ah1X-ae7kKjw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYZKDmmS5NNIaiD6hlNWh7Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtQ_9aZaGvAaCeeVXLh2qnQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-U6hnCuuhVGHdkCJ--NfgA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVGyJYbl3GXLtTJkrirZoLw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7R-Sb56swBcy9QqG0tFiLA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCcooIqS0cwFtsxnP9TuD__A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFeQdlWLyeZoBHbRxoo2a5A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGGL561pb4hm4jFO_ZUEA2A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4mAt06tphwhf7TK7R9KNjQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCG-0L8h7V9kAsDGNLw50Jlg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8Av1tO-ha143nNYzxmf1Fg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCJxJqhJZbuMkxxYdFNpRRNg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFlJfjceo4XO7WkYaDs0aNQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC_76Y6q3sn7HObwxOJrYRbw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVXBbbPVRZVIfoduaXYbAag",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSG3odlwKQhtL2oVAVDBRqQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCij5duPROsYDdkNTrxx4aiw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLq4L8SRt8PohP7Wq6V3ZxQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAq2ppsxWKDNYGz7HhFusLA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=15",
+      "category_id": "15",
+      "first_seen_at": "2026-10-21T08:04:28.784936+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdlEsLVxdu0p1liwvrS8nSA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYU_rxwOTx1PI3X2XHp9LFw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIJHMUR8_jIpPl0W8LkaDFQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCvURt1amfXhiH8lwRyGZDLw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCX_E0yugwh3XPOowVDfHnug",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCW7XJOtMFHC5dYjzSi3cq0w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCE7spuKzxP1k8A-XucxxUAQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClcim6OsyDvLESxxLlRW4aA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCE456DbvZJTByYHEk0qNqbA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1Ok2kpSBpUFc9fuj7e6RBQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuA-X-1adAwyB89zYDYt9og",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCW9y5TPZV2RA-TK3D4NqBYA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCP5DyRYoT5VgLNhC5-C5osA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCe5-U5HpzsMVg_qnWmD1fcg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCET00YnetHT7tOpu12v8jxg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6r4tSKsutlNvWa-Zon8PEA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCqcO3LZyhnOQOdT2hHQlHMQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTwQw4GIMPovFByVs7V0gXQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCPHKMJbis1c0R7d7WJQ35tA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCfNC9wVJdgRbtSzL64pL9wQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZDWpPxGUqfg780aOPme1kw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxwQAQ2j6sIoHYHFMF2CI_A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=17",
+      "category_id": "17",
+      "first_seen_at": "2026-10-21T08:04:29.022476+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjwmbv6NE4mOh8Z8VhPUx1Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4tRfRJHasLk09TZIedbXqQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSGoIq_tVESqNYF1Re-zn1Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCYh931jrUVrrISOGV1qyVtw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCECJDeK0MNapZbpaOzxrUPA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCqZDrYZzMKawDbxV-SiMLAQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCquhnKZGQV5FpivThZ3n2gw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCq578-SxpnN-u6w4qEvQ0uA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiiFVjk0cuq6NPeIG0p0Yrg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCucot-Zp428OwkyRm2I7v2Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXLnGIevWGWK2dPDcvM5-CA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCF0eCAP6Nc2Kfy0a7L8aI_g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCyCb04kz_raXCCaMVkzlZSQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCF1Q_zp3Eh3nuEHvMbdKkqg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGuL-e-ka0avJT35zFk0o5Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBAGtBjmMhfVUrv1Lc3Mdqw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWSwub1biYJX59p3cSSxR5g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCD3PTAXfTSx2mRyky8JC3Ew",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCMCMjTKUqJ1pUzmHnKrmiCA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2Pos35l91XL8YHUf178uHQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCn6k8n3uXJrdnUMtfMhm8iA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxjZe0qTFXh6jGm54LFWEDw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOLBhVvL5dcJLMZeQBUu1Vw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRw5sR-ZubiAr3Dxh_sJ64w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAk3t7WHs2zjsZpopox8Taw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIxmWUbe4OZuMDJKIHKwwKg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCyqPuqFXuAP5GMwRNFg5hpA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCFWCVPonsX-eq2YI4lp-olg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCN0jjRU6bdRf1vEmvpoyveg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEDrRCC0qRtPd5-sSa1hajw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXzGBU7qsXS0DEVvBLY6Oew",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCABd-G-yaqjdqob1cfeM93A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZym84-cGUKAf1T2isIIXvw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrA8oN8eS7coosn_9cBQ4fQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCvqflBxkC8vOz-qLIaVZysA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCVVwC2YxuzWi1CAt8b_ZoLw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1bZYgOAVp_UUXMhg5U2mYw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxVEsOhpjLTRKNUSA8e0mfA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiBm-VyAD9rud1xBgyl-fUQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCTXClH9eLcYtCw0vIZlbsZA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjRoxFS4bC9iytqPZaAJkRQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9fSBF61eAEI2JOcFrM2Mng",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWLJvbNiv5GTOIK1K9o1TMg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWkYXtnAuu7VTLPwUcRSB6A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiBD-BpwTooWML8IJZ609sg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrVkr_nIIxAeucYdZK8gtxw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2-pmwZJtKvIGng1prZOANg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCSJWlswfVUgyVliZaEFoaBw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNKWfWg41fKCYsVd8-dJHGA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=22",
+      "category_id": "22",
+      "first_seen_at": "2026-10-21T08:04:29.947701+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5V4HHKqo9-0eQ-Lhjc7C0Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCKUJ3ShvJEzn_03s7iI0W_Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAgdmAZso7kjJsEBjMijkYA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCb65ich7skWWYCmT-tyMw_w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCs2lKdXL1Z0adEJCxm3cPfg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1ygrITrO_TbIIYIgPzg1cg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNr_GfMsQ_11JmTglgvS49Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=23",
+      "category_id": "23",
+      "first_seen_at": "2026-10-21T08:04:30.295559+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC02rAIf5RYrww6AWhoI5S0w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChWXY0e-HUhoXZZ_2GlvojQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmUtBcLQXRquSciyu7texBA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8ICWClrtJfeN9AwzHwCvrw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCwrkX7SKtlKN_h_2f3seskw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCaQk0pF6pxjOe2_gSHQbiMw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpsi0N0hKfER8VjWTnvxDlA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZFBnnCCO65xMXOdtFz8CfA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAwtM-n7_1s3NDIVu7TL8uw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC0xHaESHbEh6y2dUxbd4U7Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCAqJmPOW1CkjOPYwIYkDhKg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=24",
+      "category_id": "24",
+      "first_seen_at": "2026-10-21T08:04:30.516568+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCa6vGFO9ty8v5KZJXQxdhaw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXBD5iG5cr4ZYZ99K-fmDHg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCRmnt09hfWo6hD574tLVVDQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQANb2YPwAtK-IQJrLaaUFw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCmp4vW3gpJ_LDAolo7__q_Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UClFSU9_bUb4Rc6OYfTt5SPw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCzJXNzqz6VMHSNInQt_7q6w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOTPo2y-NHJjg1EuENrxypA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCO0akufu9MOzyz3nvGIXAAw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpLB7kBu9O5dbBKhaIOmqcQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCcrmvbQbfwSZaTgBZPrjMQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC1FIRpwZhE0oubN6fWaEVsg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2OREBiIbDChxvmDeg30Bsg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCvixJtaXuNdMPUGdOPcY8Ag",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC193r5YXcpQJV34N99ZbhzQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsAUjGDoO418OcdzKs6OMCw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIYLOcEUX6TbBo7HQVF2PKA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCjJec0wv1EUomjrBNt1xCTA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCUNOwz9KTDIhhTTN3_ptUDA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBgcPSn61UQ4l_-FvcEgLQA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxcTeAKWJca6XyJ37_ZoKIQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2xLESFeytXO0j7pgVBf7fg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXteFFsGBXvViK87YkAOgow",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-SJ6nODDmufqBzPBwCvYvQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCvqtzdcURSqNjY9RQEK4XmQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCH1oRy1dINbMVp3UFWrKP0w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC8-Th83bH_thdKZDJCrn88g",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXQbZmsuSr3ndvN8NGlo7oQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChirEOpgFCupRAk5etXqPaA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdZhRs4wM7SgVXoP9WSW2yA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=25",
+      "category_id": "25",
+      "first_seen_at": "2026-10-21T08:04:30.762779+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNs6YVRcEFvtEsparPev4HQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UChcd5i0Ouc81GUeG2ZAWUtQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCWQrSQ0wJ3oZshXsZcl_Srg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCxY5ViqlFVxd40JZuOz5khQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7ZcI9WM6DYFx9P6hWtEXfA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCz4yHVUr-h86dhA5nfq4HiQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIe3iNg-eRolltofmgAixeQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCb-nULUCCvUf5iotY3iUWaA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtR-g66KS3o37mbbSTrNm2Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbyqvaKvqz6u6IgfwqYEm8Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCy6ZgqOgYpB7MoBUUsWNt0A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCEXtDSSMjSWw9g4VxN3Gi8A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCrLIM1rAuIEJfmRdEGlRviA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6RQteV4raabt8RR3eALHkg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC5QESDRf1F0v1Ig8KHpCVCQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6cgh3wDSFPAYETrpLzPSvQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeC_faDcDFeo8qiJiYWcR2Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCt5rFmkU9-fVm8kIVjz3qVg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCLnalL78FAJPhM6e9xD9U2A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCS8eC9hjtB7wOYfWJvdh0Ww",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGvGMmyEWp9hxDqmfLJbpkQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNcGuPRKIoQTPX__Di_NoRA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCuLGxrn9DYkA2iJ7dunFDXg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC7bVhkuDq5ZWhXIAS96XuAg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdzQCjROWVLG9FoqfoO6a9A",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDDrB-yGonf4uL2NDf6njTA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCgB0eIuj0i-sLlkNfHvD4Ew",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=26",
+      "category_id": "26",
+      "first_seen_at": "2026-10-21T08:04:31.132871+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCta8FWxM474irDMPABq2o4Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCZEEeomVeZmytYIpkZW7YdA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCNFT_eq_QCApMEwCACHto9Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC4Z8mPYjn6Dhr6n531YDh0Q",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCBS1NUWY7oC6FFHaXQy4zAA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCkpi9bD1DfPNKUszDFrkecw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCCQi3X-PJGmd6DrPN9Rb6iw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC3p2DbRD9dD7biTW7PAO64w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbqGbyZcuzGmk-5kNsg0OUQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCbAvigM5RD9nydJQUqKDdbA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCnaVwinpK2HQRN7r2IV23-w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCHhori2SWwzYlR_0moNDIOA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCUEmaeh13ai1ivT5wzz5Lhg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpSAvmzMn6vMBTGfgK0FZ1w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCIw9p-0zI1rEPEs_SS6fDkg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDXv3XxJ2RsaYqbGgX135Wg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCGm9gIcdikhwse4y5uDQvbg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCeY5kFq1Zr7Or0HojDS2nxA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCiKNvzMjBFowg5Sj6pevymA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCDDNo_VZvBt6mj79QmHo7cg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC-8yLb1K-DEC6dCYlLOJfiQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCE_M8A5yxnLfW0KghEeajjw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCtrgaRMSNGNTf4Q9N0Az7Ww",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXkfiU-iRzCMdIC8zlJnpAQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCdZknTFjRnKZT9Xtt7d3Vgg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCpWkQWt_gen1s5zt8eSsifA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCoORG3Kgz9NQybnMnilunDQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCE-orYJxj0L2cYWbFVHPMPQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC9qoB5JgECKwB4y2oYC712w",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCXnxMBeTy0ruSa58Wuxx-BA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCy6lU6e9QHfBPPsA_t5cxqw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCThg2IH7bNbIQF0hmXA9ECw",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCOxPcUrUHBilmv2CbldQbvg",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC2Yek8VtHh-LmmY1dKHS5JA",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UC6mboRNUSgSjumTsQoRwsVQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    },
+    {
+      "channel_id": "UCQGAh-9MRS1QEANyk5aHIgQ",
+      "discovery_source": "chart_category",
+      "discovery_query": "mostPopular:US:cat=28",
+      "category_id": "28",
+      "first_seen_at": "2026-10-21T08:04:31.841268+00:00",
+      "seed_region": "US"
+    }
+  ]
+}

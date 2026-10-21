@@ -1,0 +1,2 @@
+﻿video_id,region_code,channel_id,prediction_cutoff,feature_time,label,label_quality,f_upload_hour_local,f_upload_weekday_local,f_is_weekend,f_is_office_hours,f_video_age_at_t0_hours,f_log_t0_views,f_log_t0_views_per_hour,f_t0_like_rate,f_t0_comment_rate,f_channel_prior_cohort_videos,f_category_id
+Hqb67RxZqCg,US,UCdJoimz0uTe9bmvvf9G3s9A,2026-10-20 01:49:23.339254+00:00,2026-10-20 01:49:23.339254+00:00,1,OBSERVED_POSITIVE,15,0,0,1,6.820649792777777,10.81703452373922,8.897196504920165,0.08278849624964903,0.006899041354137419,0,10

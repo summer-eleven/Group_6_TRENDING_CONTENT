@@ -1,0 +1,44 @@
+{
+  "region": "US",
+  "sql_stats": {
+    "duplicate_batch_video_phase": 0,
+    "chart_runs": 32
+  },
+  "phases": {
+    "T0": {
+      "raw": 2040,
+      "registry": 2040,
+      "sql": 2040,
+      "raw_not_in_sql": [],
+      "sql_not_in_raw": [],
+      "registry_not_in_sql": [],
+      "sql_not_in_registry": [],
+      "consistent": true,
+      "sampled": 10,
+      "view_count_mismatches": [],
+      "minio": {
+        "checked": 4,
+        "missing": [],
+        "missing_count": 0
+      }
+    },
+    "T24": {
+      "raw": 1040,
+      "registry": 1040,
+      "sql": 1040,
+      "raw_not_in_sql": [],
+      "sql_not_in_raw": [],
+      "registry_not_in_sql": [],
+      "sql_not_in_registry": [],
+      "consistent": true,
+      "sampled": 10,
+      "view_count_mismatches": [],
+      "minio": {
+        "checked": 3,
+        "missing": [],
+        "missing_count": 0
+      }
+    }
+  },
+  "all_consistent": true
+}

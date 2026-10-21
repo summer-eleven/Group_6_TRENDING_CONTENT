@@ -1,0 +1,12 @@
+﻿feature,source,known_at,description
+f_upload_hour_local,published_at_utc -> gio dia phuong,published_at,Gio dang (0-23) theo mui gio thi truong
+f_upload_weekday_local,published_at_utc -> gio dia phuong,published_at,"Thu trong tuan, Monday=0"
+f_is_weekend,published_at_utc -> gio dia phuong,published_at,1 neu dang Thu 7/CN
+f_is_office_hours,upload_period,published_at,"1 neu OFFICE_HOURS (T2-T6, 8h-16h59 local)"
+f_video_age_at_t0_hours,t0_collected_at_utc - published_at_utc,t0_collected_at,Tuoi video luc T0 (gio)
+f_log_t0_views,t0_view_count,t0_collected_at,log1p(view tai T0)
+f_log_t0_views_per_hour,t0_view_count / tuoi,t0_collected_at,"log1p(view tai T0 / max(tuoi, 0.25h))"
+f_t0_like_rate,t0_like_count / t0_view_count,t0_collected_at,Ty le like tai T0
+f_t0_comment_rate,t0_comment_count / t0_view_count,t0_collected_at,Ty le comment tai T0
+f_channel_prior_cohort_videos,dem video cung channel co T0 som hon,t0_collected_at,So video truoc do cua channel trong cohort (chi dem T0 < cutoff cua hang hien tai)
+f_category_id,registry.category_id,published_at,Category YouTube (categorical)
