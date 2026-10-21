@@ -24,6 +24,13 @@ DEFAULT_MASTER = Path("data/processed/youtube_dataset_2000_clean.csv")
 DEFAULT_OUTPUT = Path("data/raw/playlist_discovery")
 
 
+class PlaylistNotFound(RuntimeError):
+    """Raised when playlistItems returns HTTP 404 (deleted/private channel or playlist).
+
+    Subclasses RuntimeError so any existing `except RuntimeError` still works.
+    """
+
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Find new candidate video IDs from channels' uploads playlists without modifying the master."
@@ -69,6 +76,10 @@ class YouTubeClient:
                 msg = response.json().get("error", {}).get("message", response.text[:250])
             except ValueError:
                 msg = response.text[:250]
+            # A 404 on playlistItems means this one playlist is gone/inaccessible.
+            # Raise a dedicated exception so the caller can skip it and continue.
+            if response.status_code == 404 and endpoint == "playlistItems":
+                raise PlaylistNotFound(f"YouTube {endpoint} HTTP 404: {msg}")
             raise RuntimeError(f"YouTube {endpoint} HTTP {response.status_code}: {msg}")
         return response.json()
 
@@ -115,7 +126,14 @@ def discover(
 ):
     found_ids = set()
     rows = []
-    counters = {"skipped_existing": 0, "skipped_old": 0, "skipped_missing_date": 0, "skipped_repeat": 0}
+    counters = {
+        "skipped_existing": 0,
+        "skipped_old": 0,
+        "skipped_missing_date": 0,
+        "skipped_repeat": 0,
+        "skipped_bad_playlist": 0,
+    }
+    bad_channels = []
     stopped_by_budget = False
     for channel_id, playlist_id in playlists.items():
         token = None
@@ -129,7 +147,14 @@ def discover(
             params = {"part": "contentDetails", "playlistId": playlist_id, "maxResults": 50}
             if token:
                 params["pageToken"] = token
-            data = client.get("playlistItems", **params)
+            try:
+                data = client.get("playlistItems", **params)
+            except PlaylistNotFound:
+                # Deleted / terminated / private channel: skip it, keep going.
+                counters["skipped_bad_playlist"] += 1
+                bad_channels.append(channel_id)
+                print(f"WARN: playlist {playlist_id} (channel {channel_id}) not found (404); skipping channel.")
+                break
             for item in data.get("items", []):
                 details = item.get("contentDetails", {})
                 video_id = details.get("videoId")
@@ -169,6 +194,9 @@ def discover(
                 break
         if stopped_by_budget:
             break
+    if bad_channels:
+        print(f"Skipped {len(bad_channels)} channel(s) with unavailable playlists: {', '.join(bad_channels[:10])}"
+              + (" ..." if len(bad_channels) > 10 else ""))
     return rows, counters, stopped_by_budget
 
 
