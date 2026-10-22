@@ -253,3 +253,9 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Regional datasets imported from team members
+data/imports/
+
+# Generated global datasets
+data/global/

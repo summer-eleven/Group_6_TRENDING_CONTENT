@@ -1,0 +1,56 @@
+{
+  "audit_time_utc": "2026-10-19T06:25:57+00:00",
+  "scope": "Master CSV plus youtube_cohort_registry_*.csv in registry directory",
+  "target_unique_global": 100000,
+  "unique_global_all_regions": 10093,
+  "unique_union_VN_US_JP": 9747,
+  "remaining_to_100000_all_regions": 89907,
+  "remaining_to_100000_VN_US_JP": 90253,
+  "unique_by_region": {
+    "AU": 14,
+    "GB": 114,
+    "ID": 47,
+    "JP": 50,
+    "KR": 47,
+    "PH": 40,
+    "SG": 37,
+    "TH": 47,
+    "US": 319,
+    "VN": 9378
+  },
+  "pairwise_region_overlap": {},
+  "complete_core_metadata": 10093,
+  "missing_core_metadata_by_field": {
+    "title": 0,
+    "channel_id": 0,
+    "published_at": 0
+  },
+  "input_sources": [
+    {
+      "source": "master",
+      "path": "data\\processed\\youtube_dataset_2000_clean.csv",
+      "rows": 2411,
+      "valid_rows": 2411,
+      "distinct_ids": 2411,
+      "blank_ids": 0,
+      "invalid_ids": 0,
+      "duplicate_rows_within_source": 0
+    },
+    {
+      "source": "registry:VN",
+      "path": "data\\processed\\youtube_cohort_registry_VN.csv",
+      "rows": 7682,
+      "valid_rows": 7682,
+      "distinct_ids": 7682,
+      "blank_ids": 0,
+      "invalid_ids": 0,
+      "duplicate_rows_within_source": 0
+    }
+  ],
+  "limitations": [
+    "Counts cover only the local input CSV files; any US/JP data stored elsewhere are not included.",
+    "A valid 11-character video ID format is not proof that the video still exists on YouTube.",
+    "Regional counts reflect dataset membership; a video can appear in multiple regions.",
+    "Historical snapshots and RQ1 analysis subsets are intentionally not counted as new sources."
+  ]
+}
