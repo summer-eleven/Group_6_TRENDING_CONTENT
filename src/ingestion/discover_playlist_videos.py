@@ -129,7 +129,12 @@ def discover(
             params = {"part": "contentDetails", "playlistId": playlist_id, "maxResults": 50}
             if token:
                 params["pageToken"] = token
-            data = client.get("playlistItems", **params)
+            try:
+                data = client.get("playlistItems", **params)
+            except RuntimeError as exc:
+                if "HTTP 404" in str(exc):
+                    break
+                raise
             for item in data.get("items", []):
                 details = item.get("contentDetails", {})
                 video_id = details.get("videoId")

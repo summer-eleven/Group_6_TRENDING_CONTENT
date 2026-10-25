@@ -1,0 +1,3 @@
+﻿report_date,region,generated_at_utc,unique_new_today,unique_region_total,global_unique,dup_within_day,dup_vs_known,dup_cross_region,t24_done_today,t24_delayed_today,t24_overdue_pending,chart_calls_expected,chart_calls_actual,chart_full_runs,chart_coverage,failed_calls_today,failed_calls_undated
+2026-10-19,JP,2026-10-23T00:55:41Z,10,1883,3845,0,0,0,0,0,1,24,1,1,0.0417,,32
+2026-10-25,JP,2026-10-25T13:16:40Z,300,2183,4145,0,0,0,0,0,0,22,0,0,0.0,,34
