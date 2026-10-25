@@ -1,191 +1,234 @@
+"""Standardized YouTube Comments Ingestion for RQ2 (HT-03).
+
+Selects representative video samples from youtube_cohort_registry_JP.csv:
+  - Stratified across major categories and popularity levels
+  - Fetches top comments (relevance or time ordered)
+  - Records error states (commentsDisabled, inaccessible, empty)
+  - Saves raw JSON under data/raw/comments/<REGION>/ with sampling metadata
+"""
+
+import argparse
+import json
 import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+import requests
 from dotenv import load_dotenv
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
 
 load_dotenv()
-api_key = os.getenv("YOUTUBE_API_KEY")
-youtube = build("youtube", "v3", developerKey=api_key)
+API_KEY = os.getenv("YOUTUBE_API_KEY")
+API_BASE = "https://www.googleapis.com/youtube/v3"
+
+REGISTRY_DEFAULT = Path("data/processed/youtube_cohort_registry_JP.csv")
+RAW_OUT_DEFAULT = Path("data/raw/comments/JP")
 
 
-def fetch_top_comments(video_id, region_code="JP", max_comments=100):
-    """
-    Cào tối đa max_comments bình luận nổi bật (top relevance) của một video.
-    """
-    rows = []
+def select_stratified_sample(registry_path: Path, sample_size: int = 50, random_state: int = 42) -> pd.DataFrame:
+    """Select balanced sample of videos stratified across categories."""
+    if not registry_path.is_file():
+        raise FileNotFoundError(f"Registry not found: {registry_path}")
+
+    df = pd.read_csv(registry_path, dtype={"video_id": str, "category_id": str})
+    
+    # Filter valid videos with comments enabled / positive comment count if available
+    valid = df[df["video_id"].notna() & (df["video_id"].str.len() == 11)].copy()
+    if "t0_comment_count" in valid.columns:
+        # Prefer videos known to have comments, or at least positive views
+        has_comments = valid[valid["t0_comment_count"] > 0]
+        if len(has_comments) >= sample_size:
+            valid = has_comments
+
+    # Stratified sampling by category_id
+    cat_counts = valid["category_id"].value_counts()
+    major_cats = cat_counts[cat_counts >= 2].index.tolist()
+    filtered = valid[valid["category_id"].isin(major_cats)]
+
+    if len(filtered) < sample_size:
+        return valid.sample(n=min(len(valid), sample_size), random_state=random_state)
+
+    # Proportional sampling per category
+    sample_df = (
+        filtered.groupby("category_id", group_keys=False)
+        .apply(lambda x: x.sample(n=max(1, int(round(len(x) / len(filtered) * sample_size))), random_state=random_state))
+    )
+
+    if len(sample_df) > sample_size:
+        sample_df = sample_df.sample(n=sample_size, random_state=random_state)
+    elif len(sample_df) < sample_size:
+        remaining = valid[~valid["video_id"].isin(sample_df["video_id"])]
+        if not remaining.empty:
+            add_n = min(sample_size - len(sample_df), len(remaining))
+            sample_df = pd.concat([sample_df, remaining.sample(n=add_n, random_state=random_state)])
+
+    return sample_df
+
+
+def fetch_comments_for_video(session, video_id: str, region_code: str = "JP",
+                             max_comments: int = 100, order: str = "relevance") -> tuple[list, str]:
+    """Fetch top comments for a single video. Returns (comments_list, status)."""
+    comments = []
     page_token = None
+    status = "OK"
 
-    while len(rows) < max_comments:
+    while len(comments) < max_comments:
+        params = {
+            "part": "snippet",
+            "videoId": video_id,
+            "maxResults": min(100, max_comments - len(comments)),
+            "order": order,
+            "textFormat": "plainText",
+            "key": API_KEY,
+        }
+        if page_token:
+            params["pageToken"] = page_token
+
         try:
-            request = youtube.commentThreads().list(
-                part="snippet",
-                videoId=video_id,
-                maxResults=min(100, max_comments - len(rows)),
-                order="relevance",
-                textFormat="plainText",
-                pageToken=page_token,
-            )
-            response = request.execute()
-        except HttpError as e:
-            # Bắt lỗi nếu video tắt tính năng bình luận hoặc video riêng tư
-            if "commentsDisabled" in str(e):
-                print(f"  [!] Video {video_id} đã tắt tính năng bình luận (Comments Disabled).")
-            else:
-                print(f"  [!] Lỗi API khi lấy bình luận của video {video_id}: {e}")
-            break
+            res = session.get(f"{API_BASE}/commentThreads", params=params, timeout=30)
+            if res.status_code == 403:
+                err_data = res.json()
+                reason = err_data.get("error", {}).get("errors", [{}])[0].get("reason", "")
+                if reason == "commentsDisabled":
+                    return [], "COMMENTS_DISABLED"
+                return [], f"HTTP_403_{reason}"
+            if res.status_code == 404:
+                return [], "VIDEO_NOT_FOUND"
+            if res.status_code != 200:
+                return [], f"HTTP_{res.status_code}"
+
+            data = res.json()
         except Exception as e:
-            print(f"  [!] Lỗi không xác định khi cào video {video_id}: {e}")
+            return comments, f"ERROR_{str(e)[:50]}"
+
+        items = data.get("items", [])
+        if not items:
+            if not comments:
+                status = "EMPTY"
             break
 
-        for item in response.get("items", []):
-            top = item["snippet"]["topLevelComment"]
-            snippet = top["snippet"]
-            rows.append({
-                "comment_id": top["id"],
+        now_str = datetime.now(timezone.utc).isoformat()
+        for it in items:
+            top = it.get("snippet", {}).get("topLevelComment", {})
+            snip = top.get("snippet", {})
+            comments.append({
+                "comment_id": top.get("id"),
                 "video_id": video_id,
                 "region_code": region_code,
-                "comment_text": snippet.get("textDisplay", ""),
-                "comment_like_count": snippet.get("likeCount", 0),
-                "comment_published_at": snippet.get("publishedAt"),
-                "collected_at": datetime.now(timezone.utc).isoformat(),
+                "comment_text": snip.get("textDisplay", ""),
+                "comment_like_count": snip.get("likeCount", 0),
+                "comment_published_at": snip.get("publishedAt"),
+                "collected_at": now_str,
+                "order_policy": order,
             })
 
-        page_token = response.get("nextPageToken")
+        page_token = data.get("nextPageToken")
         if not page_token:
             break
 
-    return pd.DataFrame(rows)
+    return comments, status
 
-def crawl_comments_for_video_list(
-    video_list,
-    max_comments_per_video=100,
-    region_code="JP",
-    output_dir="data/raw/comments"
-):
-    """
-    Collect top-level YouTube comments from a list of videos.
-    Save raw comments as a JSON file.
-    """
 
-    out_path = Path(output_dir)
-    out_path.mkdir(parents=True, exist_ok=True)
+def crawl_comments(registry_path: Path = REGISTRY_DEFAULT, out_dir: Path = RAW_OUT_DEFAULT,
+                   sample_size: int = 50, max_comments_per_video: int = 100,
+                   order: str = "relevance", region: str = "JP"):
+    if not API_KEY:
+        raise ValueError("YOUTUBE_API_KEY missing from .env")
 
+    out_dir.mkdir(parents=True, exist_ok=True)
+    sample_vids = select_stratified_sample(registry_path, sample_size=sample_size)
+    print(f"Selected {len(sample_vids)} stratified videos from {registry_path.name}")
+    print(f"Category distribution:\n{sample_vids['category_id'].value_counts().to_string()}\n")
+
+    session = requests.Session()
     all_comments = []
-    total = len(video_list)
+    video_summary = []
 
-    print("=" * 60)
-    print(f"Starting comment collection for {total} videos")
-    print("=" * 60)
+    print("=" * 65)
+    print(f"Starting comment acquisition (order={order}, max {max_comments_per_video}/video)...")
+    print("=" * 65)
 
-    for idx, item in enumerate(video_list, start=1):
+    for idx, row in enumerate(sample_vids.itertuples(), start=1):
+        vid = row.video_id
+        cat = getattr(row, "category_id", "NA")
+        print(f"[{idx}/{len(sample_vids)}] Video {vid} (cat={cat})... ", end="", flush=True)
 
-        # Get video ID and region
-        if isinstance(item, dict):
-            vid = item.get("video_id")
-            region = item.get("region_code", region_code)
-        else:
-            vid = str(item).strip()
-            region = region_code
-
-        # Skip invalid video IDs
-        if not vid or not str(vid).strip():
-            print(f"[{idx}/{total}] Missing video ID. Skipped.")
-            continue
-
-        # Fetch comments
-        print(f"[{idx}/{total}] Processing video: {vid}")
-
-        df_comments = fetch_top_comments(
-            video_id=str(vid).strip(),
+        comments, status = fetch_comments_for_video(
+            session=session,
+            video_id=vid,
             region_code=region,
-            max_comments=max_comments_per_video
+            max_comments=max_comments_per_video,
+            order=order,
         )
 
-        # Collect results
-        if not df_comments.empty:
-            all_comments.append(df_comments)
+        video_summary.append({
+            "video_id": vid,
+            "category_id": cat,
+            "status": status,
+            "comments_count": len(comments),
+        })
 
-            print(
-                f"  Collected {len(df_comments)} comments."
-            )
+        if status == "OK":
+            all_comments.extend(comments)
+            print(f"OK ({len(comments)} comments)")
         else:
-            print("  No comments collected.")
+            print(f"Status: {status}")
 
-        # Small delay between video requests
-        time.sleep(0.3)
+        time.sleep(0.2)
 
-    # Combine collected comments
-    if all_comments:
+    # Save raw batch
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    out_file = out_dir / f"comments_{region}_{timestamp}.json"
 
-        final_df = pd.concat(
-            all_comments,
-            ignore_index=True
-        )
+    payload = {
+        "region": region,
+        "collected_at_utc": datetime.now(timezone.utc).isoformat(),
+        "sampling_policy": {
+            "order": order,
+            "max_comments_per_video": max_comments_per_video,
+            "target_videos": sample_size,
+            "actual_videos_sampled": len(sample_vids),
+            "source_registry": str(registry_path),
+        },
+        "video_status_summary": video_summary,
+        "total_comments": len(all_comments),
+        "comments": all_comments,
+    }
 
-        # Remove duplicate comments
-        final_df = final_df.drop_duplicates(
-            subset=["comment_id"],
-            keep="first"
-        )
+    out_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
-        timestamp = datetime.now(
-            timezone.utc
-        ).strftime("%Y%m%d_%H%M%S")
+    # Statistics
+    df_stat = pd.DataFrame(video_summary)
+    disabled_count = (df_stat["status"] == "COMMENTS_DISABLED").sum()
+    empty_count = (df_stat["status"] == "EMPTY").sum()
+    ok_count = (df_stat["status"] == "OK").sum()
 
-        json_file = (
-            out_path / f"trending_comments_{timestamp}.json"
-        )
-
-        # Save JSON
-        final_df.to_json(
-            json_file,
-            orient="records",
-            force_ascii=False,
-            indent=2
-        )
-
-        print("=" * 60)
-        print("COMMENT COLLECTION COMPLETED")
-        print(f"Total comments: {len(final_df)}")
-        print(f"Output: {json_file}")
-        print("=" * 60)
-
-        return final_df
-
-    else:
-        print("No comments were collected.")
-        return pd.DataFrame()
+    print("\n" + "=" * 65)
+    print(f"RAW COMMENTS ACQUISITION COMPLETE")
+    print(f"Saved file: {out_file}")
+    print(f"Total comments harvested: {len(all_comments):,}")
+    print(f"Videos with active comments: {ok_count}/{len(sample_vids)} ({ok_count/len(sample_vids)*100:.1f}%)")
+    print(f"Comments Disabled: {disabled_count} | Empty: {empty_count}")
+    print("=" * 65)
+    return out_file
 
 
 if __name__ == "__main__":
-    # =========================================================================
-    # DÁN DANH SÁCH 10 - 20 VIDEO ID BẠN ĐÃ LỌC THỦ CÔNG VÀO DƯỚI ĐÂY:
-    # =========================================================================
-    MANUAL_TRENDING_VIDEOS = [
-        "bX1lt9yF_3s",  # Video 1
-        "Z9NWm-Ycy2Q",  # Video 2
-        "uaub3iRXnEk",  # Video 3
-        "9M4W-t8_zK8",
-        "4urpSWkaboA",
-        "g0CVF2HCNM4",
-        "nn2V3mptPLg",
-        "XwCyAnRevrg",
-        "sGQ_AaYImXA",
-        "FvRaYwGW0k4",
-        "LZMrGVAw1S0",
-        "DTEGZrVSWQY",
-        "nKl2Xqw5t4Q",
-        "CWcSpLxtO84"
-    ]
+    parser = argparse.ArgumentParser(description="Standardized YouTube comments crawler for JP RQ2")
+    parser.add_argument("--registry-path", type=Path, default=REGISTRY_DEFAULT)
+    parser.add_argument("--out-dir", type=Path, default=RAW_OUT_DEFAULT)
+    parser.add_argument("--sample-size", type=int, default=50)
+    parser.add_argument("--max-comments-per-video", type=int, default=100)
+    parser.add_argument("--order", choices=["relevance", "time"], default="relevance")
+    parser.add_argument("--region", default="JP")
+    args = parser.parse_args()
 
-    crawl_comments_for_video_list(
-        video_list=MANUAL_TRENDING_VIDEOS,
-        max_comments_per_video=100,  # Số comment lấy mỗi video (tối đa 100)
-        region_code="JP",           # Mã quốc gia (JP, VN, US, ...)
-        output_dir="data/raw/comments"
+    crawl_comments(
+        registry_path=args.registry_path,
+        out_dir=args.out_dir,
+        sample_size=args.sample_size,
+        max_comments_per_video=args.max_comments_per_video,
+        order=args.order,
+        region=args.region,
     )
