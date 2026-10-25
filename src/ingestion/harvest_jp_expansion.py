@@ -170,9 +170,9 @@ def harvest(target_new=3000, max_per_channel=30, lookback_days=180):
                 break
 
         if idx % 100 == 0 or len(collected_candidates) >= target_new:
-            print(f"  Processed {idx}/{len(playlists)} channels | Found {len(collected_candidates):,}/{target_new:,} unique videos...")
+            print(f"  Processed {idx}/{len(playlists)} channels | Found {len(collected_candidates):,}/{target_new:,} unique videos...", flush=True)
 
-    print(f"\nDiscovered {len(collected_candidates):,} candidates. Fetching metadata via videos.list in batches of 50...")
+    print(f"\nDiscovered {len(collected_candidates):,} candidates. Fetching metadata via videos.list in batches of 50...", flush=True)
 
     final_records = []
     for i in range(0, len(collected_candidates), 50):
