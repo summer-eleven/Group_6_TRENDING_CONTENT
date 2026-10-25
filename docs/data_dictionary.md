@@ -70,3 +70,41 @@ Dành riêng cho nghiên cứu RQ1 (Ảnh hưởng của thời điểm đăng t
 3. **Cửa sổ quan sát 7 ngày (7-day Observation Window):**
    - `OBSERVED_CHARTED`: Video có ít nhất 1 lần xuất hiện trong danh sách mostPopular trong 7 ngày kể từ lúc phát hiện.
    - `UNKNOWN / INCOMPLETE`: Video chưa từng xuất hiện trên chart nhưng số giờ máy tính chạy theo dõi không đạt ngưỡng độ phủ tối thiểu (ví dụ `chart_coverage_ratio < 0.70`).
+
+---
+
+## 5. RQ2 Comment Sentiment & Virality Modeling Schema (Nhiệm vụ HT-05 / HT-06)
+
+Dành cho nghiên cứu RQ2 (Ảnh hưởng của phản ứng cảm xúc cộng đồng đến độ lan tỏa của video trên YouTube Nhật Bản) và mô hình hồi quy giải thích độ lan tỏa (Virality Regression):
+
+### A. Bình luận cấp vi mô (Comment-Level Schema: `data/processed/comments_sentiment_JP.csv`)
+
+| Tên trường | Kiểu dữ liệu | Vai trò | Mô tả chi tiết | Ví dụ |
+| :--- | :--- | :--- | :--- | :--- |
+| **`comment_id`** | String | Định danh | ID độc nhất của bình luận YouTube. Khử trùng lặp trên toàn bộ các mẻ cào. | `"UgwxXYZ123"` |
+| **`video_id`** | String | Khóa ngoại | Video chứa bình luận (11 ký tự). | `"QDaqG4FUYAM"` |
+| **`region_code`** | String | Phân vùng | Phân vùng thị trường nghiên cứu (`JP`). | `"JP"` |
+| **`comment_clean`** | String | Văn bản sạch | Văn bản bình luận sau khi xử lý token hóa URL (`<URL>`), bảo toàn Kanji, Katakana, Hiragana, Emoji. | `"最高に面白い！ <URL>"` |
+| **`comment_like_count`** | Integer | Trọng số ảnh hưởng | Số lượt thích của riêng bình luận đó từ người xem khác. | `24` |
+| **`sentiment`** | Categorical | Nhãn cảm xúc | Kết quả phân loại từ mô hình XLM-RoBERTa (`positive`, `negative`, `neutral`). | `"positive"` |
+| **`sentiment_score`** | Float (0.0 - 1.0) | Độ tin cậy mô hình | Xác suất (Softmax score) mà mô hình gán cho nhãn cảm xúc dự đoán. | `0.8924` |
+
+### B. Video cấp vĩ mô (Video-Level Dataset Schema: `data/processed/rq2_video_sentiment_JP.csv`)
+
+| Tên trường | Kiểu dữ liệu | Vai trò trong RQ2/Report 4 | Công thức / Mô tả quy chuẩn |
+| :--- | :--- | :--- | :--- |
+| **`video_id`** | String | Định danh chính | Khóa chính của video trong tập dữ liệu hồi quy. |
+| **`sample_comment_count`** | Integer | Cỡ mẫu bình luận | Số lượng bình luận được cào và phân loại của video (tối đa 80/video). |
+| **`positive_ratio`** | Float [0, 1] | Tỷ lệ tích cực | `positive_count / sample_comment_count` |
+| **`negative_ratio`** | Float [0, 1] | Biến giải thích chính ($X_1$) | `negative_count / sample_comment_count` (Đo lường mức độ gây tranh cãi/phẫn nộ). |
+| **`neutral_ratio`** | Float [0, 1] | Tỷ lệ trung tính | `neutral_count / sample_comment_count` |
+| **`sentiment_polarity`** | Float [-1, 1] | Cực tính cảm xúc ($X_2$) | `(positive_count - negative_count) / sample_comment_count` |
+| **`weighted_negative_ratio`**| Float [0, 1] | Tiêu cực có trọng số ($X_3$)| Tỷ lệ bình luận tiêu cực có điều chỉnh theo trọng số số lượt thích `log1p(comment_like_count)`. |
+| **`view_count`** | Float | Quy mô lượt xem | Lượt xem đo lường tại thời điểm khảo sát hoặc $T_0$. |
+| **`log_view_count`** | Float | Biến mục tiêu ($Y$) | $\log(1 + \text{view\_count})$ dùng trong mô hình hồi quy tuyến tính OLS/Ridge/Random Forest. |
+| **`like_to_view_ratio`** | Float | Biến tương tác ($X_4$) | $\text{like\_count} / (\text{view\_count} + 1)$ (Đo lường mức độ đồng thuận tích cực). |
+| **`comment_to_view_ratio`**| Float | Biến tương tác ($X_5$) | $\text{comment\_count} / (\text{view\_count} + 1)$ (Mức độ kích thích thảo luận). |
+| **`upload_hour_jst`** | Integer (0-23) | Biến thời gian | Giờ đăng tải theo múi giờ Nhật Bản (JST = UTC + 9). |
+| **`is_weekend`** | Binary (0, 1) | Biến mùa vụ | 1 nếu video đăng vào Thứ 7 hoặc Chủ Nhật theo giờ JST, ngược lại 0. |
+| **`is_trending`** | Binary (0, 1) | Cờ xu hướng | 1 nếu video từng xuất hiện trên bảng mostPopular Trending, 0 nếu không. |
+

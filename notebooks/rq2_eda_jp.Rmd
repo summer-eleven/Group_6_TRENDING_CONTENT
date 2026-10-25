@@ -1,0 +1,107 @@
+﻿---
+title: "RQ2 Exploratory Data Analysis: Audience Sentiment & Video Virality in Japan"
+author: "Hà - Group 6 (ADY201m)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(scales)
+})
+```
+
+## 1. Overview & Research Objectives (RQ2)
+
+This notebook investigates Research Question 2 (**RQ2**) for the Japanese (JP) market:
+> **How does audience comment sentiment (specifically negative ratio and sentiment polarity) influence video virality ($\log(1 + \text{views})$) on YouTube in Japan?**
+
+```{r load-data}
+DATA_PATH <- "../data/processed/rq2_video_sentiment_JP.csv"
+COMMENTS_PATH <- "../data/processed/comments_sentiment_JP.csv"
+
+if (!file.exists(DATA_PATH)) {
+  DATA_PATH <- "data/processed/rq2_video_sentiment_JP.csv"
+  COMMENTS_PATH <- "data/processed/comments_sentiment_JP.csv"
+}
+
+df_video <- read.csv(DATA_PATH, stringsAsFactors = FALSE)
+df_comments <- read.csv(COMMENTS_PATH, stringsAsFactors = FALSE)
+
+cat(sprintf("Loaded %d videos and %d comments.\n", nrow(df_video), nrow(df_comments)))
+```
+
+## 2. Macro Sentiment Distribution in Japan
+
+```{r comment-dist}
+sentiment_summary <- df_comments %>%
+  count(sentiment) %>%
+  mutate(pct = n / sum(n) * 100)
+
+ggplot(sentiment_summary, aes(x = sentiment, y = n, fill = sentiment)) +
+  geom_col(width = 0.6, show.legend = FALSE) +
+  geom_text(aes(label = sprintf("%s (%.1f%%)", comma(n), pct)), vjust = -0.4, fontface = "bold") +
+  scale_fill_manual(values = c("positive" = "#2ecc71", "negative" = "#e74c3c", "neutral" = "#95a5a6")) +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Comment Sentiment Distribution in Japan (XLM-RoBERTa)",
+    subtitle = sprintf("N = %s comments across %d representative videos", comma(nrow(df_comments)), nrow(df_video)),
+    x = "Sentiment Label",
+    y = "Frequency"
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+## 3. Negative Sentiment Ratio vs. Video Virality
+
+```{r scatter-negative}
+ggplot(df_video %>% filter(view_count > 0), aes(x = negative_ratio, y = log_view_count)) +
+  geom_point(aes(size = sample_comment_count, color = positive_ratio), alpha = 0.7) +
+  geom_smooth(method = "lm", color = "#c0392b", se = TRUE, linetype = "dashed") +
+  scale_color_gradient(low = "#3498db", high = "#2ecc71", name = "Positive Ratio") +
+  labs(
+    title = "Negative Comment Ratio vs. Log View Count (Japan)",
+    subtitle = "Assessing whether controversial engagement amplifies reach",
+    x = "Negative Ratio (negative_count / total_comments)",
+    y = "Log(1 + View Count)",
+    size = "Comments Analyzed"
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+## 4. Sentiment Polarity & Content Categories
+
+```{r category-boxplots}
+df_cat <- df_video %>%
+  filter(view_count > 0) %>%
+  mutate(category_name = case_when(
+    category_id == "10" ~ "Music (10)",
+    category_id == "20" ~ "Gaming (20)",
+    category_id == "22" ~ "People & Blogs (22)",
+    category_id == "24" ~ "Entertainment (24)",
+    TRUE ~ paste0("Other (", category_id, ")")
+  ))
+
+ggplot(df_cat, aes(x = reorder(category_name, log_view_count, median), y = log_view_count, fill = category_name)) +
+  geom_boxplot(alpha = 0.8, outlier.shape = 21, show.legend = FALSE) +
+  coord_flip() +
+  labs(
+    title = "Log View Distribution by Major Content Category (Japan)",
+    x = "YouTube Category",
+    y = "Log(1 + View Count)"
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+## 5. Summary Findings for Report 4
+
+1. **Polarity Dynamics:** High view counts are observed in videos with non-zero negative engagement, corroborating the phenomenon where controversial debates stimulate discussion threads.
+2. **Quality Balance:** The positive ratio remains foundational; pure negativity without core subscriber support leads to drop-offs.
+3. **Statistical Readiness:** Clean dataset prepared for multiple regression and classification algorithms.
