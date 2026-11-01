@@ -117,3 +117,65 @@ No API keys or passwords were committed to GitHub.
 - The comment pilot is not representative of the full YouTube population.
 
 All AI-assisted changes require human review before Git integration.
+
+## AI Usage Update - October 2026
+
+### Additional Technical Support
+
+- Assisted with Docker Compose configuration and environment-variable security.
+- Assisted with Git staging, stash, rebase, conflict resolution, and commit organization.
+- Assisted with technical documentation and Report 2 evidence organization.
+- Assisted with global dataset integration and integrity auditing.
+- Assisted with distinguishing periodic snapshot collection from the discovery of new YouTube video IDs.
+- Assisted with preparing E07 snapshot-growth and E09 global-audit evidence.
+- Assisted with reviewing RQ1 statistical modeling, incomplete chart coverage, and outcome-label handling.
+
+### Human Verification
+
+All generated code and commands were manually reviewed and executed by the team.
+
+Verification activities included:
+
+- Docker Compose
+- MinIO Web UI
+- Python terminal output
+- SQL Server Management Studio
+- GitHub commit history
+
+No API keys or passwords were intentionally committed to GitHub.
+
+### Historical Verified Status - October 2026
+
+The following figures represent a previously verified project milestone, not the latest global dataset status:
+
+- Unique videos: 2,011
+- Historical snapshot records: 10,077
+- Failed database loads: 0
+- 10,000+ snapshot-record milestone achieved.
+
+The historical 10.08% figure refers to 10,077 snapshot records against a 100,000-record reference target. It must not be interpreted as progress toward the separate target of 100,000 unique video IDs.
+
+### Additional AI Usage Records
+
+| Date | Member | AI Tool | Purpose | Result / Usage |
+|---|---|---|---|---|
+| 2026-10-14 | Ha | ChatGPT | Support design and debugging of automated Daily Cohort discovery and T0 synchronization | Guidance reviewed; the team reported verification of 1,000 new video IDs, SQL insertion, and MinIO upload |
+| 2026-10-14 | Ha | ChatGPT | Support YouTube Chart Monitor validation and RQ1 dataset construction | Guidance used to review chart capture logs, SQL records, and RQ1 output |
+| 2026-10-15 | Ha | ChatGPT | Assist T24 pipeline validation and interpretation of chart coverage | The team reported verification of 2,030 T0 records and 1,030 T24 records in SQL Server |
+| 2026-10-15 | Ha | ChatGPT | Assist RQ2 comment crawler debugging and dependency setup | Guidance used to test YouTube API collection on three videos |
+| 2026-10-15 | Ha | ChatGPT | Support comment data-quality checks and project documentation | The team reported checking 24 comments for duplicate IDs, missing IDs, empty texts, and invalid publication dates |
+| 2026-10-19 | Ha | ChatGPT | Review global data integration and audit process | Guidance on unique video IDs, duplicate records, metadata completeness, and video-region relationships |
+| 2026-10-20 | Ha | ChatGPT | Review YouTube snapshot monitoring pipeline | Clarified the difference between periodic snapshot collection and discovering new videos |
+| 2026-10-21 | Ha | ChatGPT | Support global dataset validation and E09 evidence preparation | Reviewed global master integrity metrics and regional audit evidence |
+| 2026-10-26 | Ha | ChatGPT | Support E07 snapshot-growth evidence preparation | Guidance on snapshot history, view-count changes, and timestamp interpretation |
+| 2026-10-27 | Ha | ChatGPT | Review RQ1 statistical modeling and Git workflow | Reviewed incomplete-coverage labels, analysis limitations, and commit organization |
+
+### Outstanding Research Limitations
+
+- RQ1 chart coverage remains incomplete.
+- Chart absence cannot automatically be interpreted as a negative outcome.
+- The RQ1 cohort contains a substantial number of observations with unknown outcomes; these must not be silently classified as confirmed negatives.
+- RQ2 sentiment classification and hypothesis testing are not completed.
+- The comment pilot is not representative of the full YouTube population.
+
+All AI-assisted changes require human review before Git integration.
