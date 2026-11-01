@@ -3,10 +3,9 @@ setlocal
 cd /d "%~dp0"
 if not exist logs mkdir logs
 echo [%date% %time%] START JP T24 (%*) >> logs\JP_t24.log
-uv run python -m src.ingestion.run_due_cohorts --region JP %* >> logs\JP_t24.log 2>&1
+uv run python -m src.ingestion.run_due_cohorts_jp %* >> logs\JP_t24.log 2>&1
 set EXIT_CODE=%ERRORLEVEL%
 
-:: Automatically update JP cohort registry after T24 updates
 echo [%date% %time%] Updating JP cohort registry >> logs\JP_t24.log
 uv run python -m src.processing.build_cohort_registry_jp >> logs\JP_t24.log 2>&1
 
