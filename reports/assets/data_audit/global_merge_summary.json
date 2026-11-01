@@ -1,0 +1,115 @@
+{
+  "audit_time_utc": "2026-10-21T06:05:32+00:00",
+  "unique_global_all_regions": 19248,
+  "unique_union_VN_US_JP": 18636,
+  "remaining_to_100000_VN_US_JP": 81364,
+  "unique_by_region": {
+    "AU": 31,
+    "GB": 208,
+    "ID": 92,
+    "JP": 1722,
+    "KR": 93,
+    "PH": 74,
+    "SG": 65,
+    "TH": 94,
+    "US": 5396,
+    "VN": 12055
+  },
+  "target_multi_region_video_count": 537,
+  "complete_core_metadata_global": 19248,
+  "complete_core_metadata_target": 18636,
+  "incomplete_core_metadata_target": 0,
+  "missing_core_metadata_by_field_global": {},
+  "channel_id_conflicts_across_sources": 0,
+  "videos_seen_only_in_history_global": 2541,
+  "inputs": [
+    {
+      "source": "vn_master",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\processed\\youtube_dataset_2000_clean.csv",
+      "rows": 2411,
+      "valid_rows": 2411,
+      "unique_ids": 2411,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 0
+    },
+    {
+      "source": "vn_registry",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\processed\\youtube_cohort_registry_VN.csv",
+      "rows": 9531,
+      "valid_rows": 9531,
+      "unique_ids": 9531,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 0
+    },
+    {
+      "source": "us_master",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\imports\\US\\youtube_dataset_2000_clean.csv",
+      "rows": 1998,
+      "valid_rows": 1998,
+      "unique_ids": 1998,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 0
+    },
+    {
+      "source": "us_registry",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\imports\\US\\youtube_cohort_registry_US.csv",
+      "rows": 40,
+      "valid_rows": 40,
+      "unique_ids": 40,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 0
+    },
+    {
+      "source": "jp_master",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\imports\\JP\\youtube_dataset_2000_clean.csv",
+      "rows": 3635,
+      "valid_rows": 3635,
+      "unique_ids": 3635,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 0
+    },
+    {
+      "source": "us_history",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\imports\\US\\youtube_history.csv",
+      "rows": 213203,
+      "valid_rows": 213203,
+      "unique_ids": 5139,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 208064
+    },
+    {
+      "source": "us_history_region",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\imports\\US\\youtube_history_US.csv",
+      "rows": 5330,
+      "valid_rows": 5330,
+      "unique_ids": 796,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 4534
+    },
+    {
+      "source": "jp_history",
+      "path": "C:\\Users\\XUAN HA\\Desktop\\Group_6_TRENDING_CONTENT\\data\\imports\\JP\\youtube_history.csv",
+      "rows": 122247,
+      "valid_rows": 122247,
+      "unique_ids": 3635,
+      "invalid_ids": 0,
+      "blank_ids": 0,
+      "duplicates_in_source": 118612
+    }
+  ],
+  "limitations": [
+    "Each video_id appears once in global master. Regional memberships may overlap.",
+    "Regional membership means observed with region_code, NOT the video's country of origin.",
+    "The history rows are deduplicated by video_id; snapshot counts are not unique videos.",
+    "A valid 11-character ID and nonblank metadata do not prove the video is currently public.",
+    "Raw per-source values are preserved in their original input CSVs; selected metadata prefer registry, then master, then history.",
+    "Files in data/imports are ignored by Git, and generated large CSVs should also be ignored."
+  ]
+}
