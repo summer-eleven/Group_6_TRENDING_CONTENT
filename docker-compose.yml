@@ -1,7 +1,9 @@
 services:
   minio:
-    image: bitnamilegacy/minio:2025.1.20-debian-12-r0
+    image: quay.io/minio/minio:latest
     container_name: minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
     ports:
       - "9000:9000"
       - "9001:9001"
@@ -9,11 +11,12 @@ services:
       MINIO_ROOT_USER: ${MINIO_ACCESS_KEY}
       MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY}
     volumes:
-      - minio_data:/bitnami/minio/data
-      
+      - minio_data:/data
+
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: youtube_sqlserver
+    restart: unless-stopped
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: ${DB_PASSWORD}
