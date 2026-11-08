@@ -1,0 +1,4 @@
+sample,n_videos,strata,office_pos_observed,office_pos_expected,mh_odds_ratio,cmh_p
+all batches,11531,5,9.0,10.72,0.796,0.5440699792349428
+coverage >= 0.5,9682,4,9.0,9.23,0.967,0.9304526815705989
+fresh <= 24h at T0,5286,3,4.0,2.68,1.743,0.3528852045584343
