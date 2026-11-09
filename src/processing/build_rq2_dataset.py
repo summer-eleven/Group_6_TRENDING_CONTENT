@@ -4,9 +4,11 @@ Aggregates comment-level sentiment to video-level metrics:
   - total_comments, positive_ratio, negative_ratio, neutral_ratio
   - weighted_negative_ratio (weighted by comment likes)
   - joins with video performance metrics (views, likes, comments, category, upload time)
+  - incorporates registry, master, and 32k expansion metadata
   - outputs to data/processed/rq2_video_sentiment_JP.csv
 """
 
+import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -14,6 +16,7 @@ import pandas as pd
 SENTIMENT_PATH = Path("data/processed/comments_sentiment_JP.csv")
 REGISTRY_PATH = Path("data/processed/youtube_cohort_registry_JP.csv")
 MASTER_PATH = Path("data/processed/youtube_dataset_2000_clean.csv")
+EXPANSION_DIR = Path("data/raw/expansion_jp")
 OUTPUT_PATH = Path("data/processed/rq2_video_sentiment_JP.csv")
 
 
@@ -55,7 +58,7 @@ def build_rq2_dataset():
 
     vid_sent_df = pd.DataFrame(records)
 
-    # 2. Load Registry & Master to join metadata
+    # 2. Load Registry, Master, & Expansion to join metadata
     meta_dict = {}
 
     if REGISTRY_PATH.is_file():
@@ -99,6 +102,30 @@ def build_rq2_dataset():
                     "is_trending": int(row.get("is_trending", 0)),
                 }
 
+    if EXPANSION_DIR.is_dir():
+        for f in sorted(EXPANSION_DIR.glob("*.json")):
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                for row in data.get("items", []):
+                    vid = str(row.get("video_id", "")).strip()
+                    if vid and (vid not in meta_dict or meta_dict[vid]["view_count"] == 0):
+                        v_cnt = float(row.get("t0_view_count", 0))
+                        meta_dict[vid] = {
+                            "title": row.get("title", ""),
+                            "channel_id": row.get("channel_id", ""),
+                            "channel_title": row.get("channel_title", ""),
+                            "category_id": str(row.get("category_id", "24")),
+                            "published_at": row.get("published_at", ""),
+                            "view_count": v_cnt,
+                            "like_count": float(row.get("t0_like_count", 0)),
+                            "comment_count": float(row.get("t0_comment_count", 0)),
+                            "is_trending": 0,
+                        }
+            except Exception:
+                pass
+
+    print(f"Total video metadata dictionary size: {len(meta_dict):,} videos")
+
     # 3. Merge metadata into aggregated sentiment frame
     merged_rows = []
     for _, r in vid_sent_df.iterrows():
@@ -138,8 +165,8 @@ def build_rq2_dataset():
 
     print("\n=======================================================")
     print("RQ2 VIDEO-LEVEL DATASET BUILT (HT-05)")
-    print(f"Total videos: {len(final_df)}")
-    print(f"Saved to:     {OUTPUT_PATH}")
+    print(f"Total videos represented: {len(final_df):,}")
+    print(f"Saved to:                 {OUTPUT_PATH}")
     print("\nSummary Statistics of Sentiment Ratios:")
     print(final_df[["positive_ratio", "negative_ratio", "neutral_ratio", "log_view_count"]].describe().round(4))
     print("=======================================================")

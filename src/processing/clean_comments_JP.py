@@ -1,4 +1,4 @@
-"""Multi-batch Comment Cleaning Pipeline for JP RQ2 (HT-03).
+﻿"""Multi-batch Comment Cleaning Pipeline for JP RQ2 (HT-03).
 
 Features:
   - Ingests ALL raw comment JSON files under data/raw/comments/JP/ (and legacy data/raw/comments/)
@@ -95,7 +95,10 @@ def clean_comments():
     final_df = dedup_df[available_cols]
 
     # Save to CSV
-    final_df.to_csv(OUTPUT_PATH, index=False, encoding="utf-8-sig")
+    for col in ["comment_text", "comment_clean"]:
+        if col in final_df.columns:
+            final_df[col] = final_df[col].astype(str).str.replace("\x00", "", regex=False)
+    final_df.to_csv(OUTPUT_PATH, index=False, encoding="utf-8-sig", escapechar="\\")
 
     # Print Quality Audit Summary
     unique_vids = final_df["video_id"].nunique()

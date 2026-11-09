@@ -1,4 +1,4 @@
-import sys
+﻿import sys
 # Ensure UTF-8 output on Windows
 if sys.platform == 'win32':
     try:
@@ -11,59 +11,80 @@ import pandas as pd
 import torch
 from transformers import pipeline
 
-# Đường dẫn file
 INPUT_PATH = Path("data/processed/comments_clean_JP.csv")
 OUTPUT_PATH = Path("data/processed/comments_sentiment_JP.csv")
 
 if not INPUT_PATH.exists():
-    raise FileNotFoundError(f"Không tìm thấy file {INPUT_PATH}! Hãy hoàn thành bước trước.")
+    raise FileNotFoundError(f"Không tìm thấy file {INPUT_PATH}!")
 
 print("--> Đang tải dữ liệu sạch...")
 comments = pd.read_csv(INPUT_PATH)
-print(f"Tổng số comment cần phân loại: {len(comments)}")
+total_count = len(comments)
+print(f"Tổng số comment trong tập sạch: {total_count:,}")
 
-# 1. Khởi tạo pipeline mô hình đa ngôn ngữ XLM-RoBERTa
-device = 0 if torch.cuda.is_available() else -1
-print(f"--> Đang tải model (Thiết bị sử dụng: {'GPU' if device == 0 else 'CPU'})...")
+# Incremental cache check
+cached_dict = {}
+if OUTPUT_PATH.exists():
+    try:
+        prev_df = pd.read_csv(OUTPUT_PATH)
+        if "comment_id" in prev_df.columns and "sentiment" in prev_df.columns:
+            for _, r in prev_df.iterrows():
+                cid = str(r["comment_id"]).strip()
+                cached_dict[cid] = (r["sentiment"], r.get("sentiment_score", 0.8))
+        print(f"--> Tìm thấy {len(cached_dict):,} kết quả sentiment đã phân loại trước đó.")
+    except Exception as e:
+        print(f"Không thể đọc cache cũ: {e}")
 
-sentiment_pipe = pipeline(
-    "sentiment-analysis",
-    model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
-    tokenizer="cardiffnlp/twitter-xlm-roberta-base-sentiment",
-    truncation=True,
-    max_length=512,
-    device=device,
-)
+# Identify comments that need classification
+needs_pred = []
+for idx, r in comments.iterrows():
+    cid = str(r["comment_id"]).strip()
+    if cid not in cached_dict:
+        needs_pred.append(idx)
 
-# 2. Sanity Check kỹ thuật: Thử nghiệm 5 mẫu đầu tiên
-print("\n" + "=" * 60)
-print("TEST THỬ 5 KẾT QUẢ ĐẦU TIÊN:")
-sample_texts = comments["comment_clean"].head(5).astype(str).tolist()
-sample_preds = sentiment_pipe(sample_texts)
+print(f"--> Số lượng comment mới cần phân loại AI: {len(needs_pred):,} / {total_count:,}")
 
-for text, pred in zip(sample_texts, sample_preds):
-    print(f"Text: {text[:50]}...")
-    print(f" -> Label: {pred['label'].lower()} | Score: {pred['score']:.4f}\n")
-print("=" * 60)
+if len(needs_pred) > 0:
+    device = 0 if torch.cuda.is_available() else -1
+    print(f"--> Đang tải model (Thiết bị sử dụng: {'GPU' if device == 0 else 'CPU'})...")
 
-# 3. Phân loại toàn bộ dữ liệu theo batch (tối ưu tốc độ)
-print("--> Đang phân loại sentiment toàn bộ comments...")
-texts = comments["comment_clean"].astype(str).str[:1000].tolist()
+    sentiment_pipe = pipeline(
+        "sentiment-analysis",
+        model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+        tokenizer="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+        truncation=True,
+        max_length=512,
+        device=device,
+    )
 
-# Sử dụng batch_size=32 để chạy nhanh hơn nhiều so với gọi từng dòng
-results = sentiment_pipe(texts, batch_size=32)
+    texts_to_pred = comments.loc[needs_pred, "comment_clean"].astype(str).str[:1000].tolist()
+    print(f"--> Đang phân loại {len(texts_to_pred):,} comments mới (batch_size=64)...")
+    results = sentiment_pipe(texts_to_pred, batch_size=64)
 
-comments["sentiment"] = [res["label"].lower() for res in results]
-comments["sentiment_score"] = [float(res["score"]) for res in results]
+    for idx, res in zip(needs_pred, results):
+        cid = str(comments.loc[idx, "comment_id"]).strip()
+        cached_dict[cid] = (res["label"].lower(), float(res["score"]))
 
-# 4. Xuất file kết quả theo yêu cầu bắt buộc
+# Assign all sentiments
+sentiments = []
+scores = []
+for _, r in comments.iterrows():
+    cid = str(r["comment_id"]).strip()
+    val = cached_dict.get(cid, ("neutral", 0.5))
+    sentiments.append(val[0])
+    scores.append(val[1])
+
+comments["sentiment"] = sentiments
+comments["sentiment_score"] = scores
+
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 comments.to_csv(OUTPUT_PATH, index=False, encoding="utf-8-sig")
 
 print("\n" + "=" * 60)
 print("PHÂN LOẠI HOÀN TẤT!")
 print(f"- Đã lưu kết quả tại: {OUTPUT_PATH}")
-print("\nPhân phối nhãn sentiment:")
+print(f"- Tổng số bình luận đã gán nhãn: {len(comments):,}")
+print("\nPhân phối nhãn sentiment toàn bộ:")
 print(comments["sentiment"].value_counts())
 print(comments["sentiment"].value_counts(normalize=True).mul(100).round(2).astype(str) + " %")
 print("=" * 60)
