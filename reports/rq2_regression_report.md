@@ -4,28 +4,28 @@
 Báo cáo này phân tích thực nghiệm câu hỏi nghiên cứu **RQ2**: *Mức độ phản ứng cảm xúc của cộng đồng (đặc biệt là tỷ lệ bình luận tiêu cực `negative_ratio` và phân cực `sentiment_polarity`) ảnh hưởng như thế nào đến độ lan tỏa (virality - $\log(1 + \text{view\_count})$) của video YouTube tại thị trường Nhật Bản?*
 
 - **Biến mục tiêu (Target):** $\log(1 + \text{view\_count})$
-- **Số lượng quan sát:** 111 video độc lập từ hệ thống rolling cohorts và registry mở rộng JP.
+- **Số lượng quan sát:** 1018 video độc lập từ hệ thống rolling cohorts và registry mở rộng JP.
 - **Kỹ thuật chia tập:** 80% Train, 20% Test (random_state=42).
 
 ## 2. Kết Quả Đánh Giá Hiệu Năng Mô Hình
 
 | Thuật Toán | $R^2$ Score | MAE (Log Views) | RMSE (Log Views) |
 |:---|:---:|:---:|:---:|
-| **Ridge Regression (Chuẩn hóa)** | **0.1027** | **0.9803** | **1.2744** |
-| **Random Forest Regressor** | **0.2083** | **0.9867** | **1.1971** |
+| **Ridge Regression (Chuẩn hóa)** | **0.0537** | **1.1347** | **1.4560** |
+| **Random Forest Regressor** | **0.2659** | **0.9834** | **1.2824** |
 
 ## 3. Hệ Số Hồi Quy & Tầm Quan Trọng Của Biến (Feature Coefficients)
 
 | Biến Đặc Trưng | Hệ Số $\beta$ (Ridge) | Độ Ảnh Hưởng Tuyệt Đối |
 |:---|:---:|:---:|
-| `weighted_negative_ratio` | 0.5461 | 0.5461 |
-| `comment_to_view_ratio` | -0.5233 | 0.5233 |
-| `positive_ratio` | 0.3764 | 0.3764 |
-| `cat_24` | -0.3495 | 0.3495 |
-| `cat_22` | 0.3339 | 0.3339 |
-| `cat_29` | -0.3316 | 0.3316 |
-| `sentiment_polarity` | 0.2512 | 0.2512 |
-| `cat_25` | -0.1954 | 0.1954 |
+| `weighted_negative_ratio` | 0.2999 | 0.2999 |
+| `cat_20` | 0.2827 | 0.2827 |
+| `comment_to_view_ratio` | -0.2730 | 0.2730 |
+| `positive_ratio` | 0.2627 | 0.2627 |
+| `cat_23` | 0.1782 | 0.1782 |
+| `cat_24` | 0.1662 | 0.1662 |
+| `cat_29` | -0.1570 | 0.1570 |
+| `cat_28` | 0.1535 | 0.1535 |
 
 ## 4. Đúc Kết & Ý Nghĩa Thống Kê
 1. **Tác động của cảm xúc tiêu cực (`negative_ratio`):**
