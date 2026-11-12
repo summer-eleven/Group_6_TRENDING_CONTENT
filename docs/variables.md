@@ -1,12 +1,14 @@
-# Research Variables Table
+# Research Variables Table (Updated per Final Analysis Plan)
 
 | Variable | Type | Role | Purpose |
 | --- | --- | --- | --- |
-| `upload_hour` / `publish_time` | Datetime / Categorical | **Independent Variable** (IV1) | Phân loại khung giờ đăng video (khung giờ hành chính vs. khung giờ nghỉ ngơi/vàng) để đánh giá tác động tới khả năng lọt Top Trending (RQ1). |
-| `dislike_count` | Numerical (Discrete) | **Independent Variable** (IV2) | Đo lường mức độ tương tác tiêu cực của người dùng để kiểm định ảnh hưởng tới mức độ viral và duy trì xu hướng của video (RQ2). |
-| `is_trending` / `time_to_trend` | Binary (0/1) / Numerical | **Dependent Variable** (DV1) | Đánh giá trạng thái và tốc độ (số giờ/ngày) video đạt Top Trending dưới ảnh hưởng của thời điểm đăng (RQ1). |
-| `view_count` / `trending_duration` | Numerical (Continuous) | **Dependent Variable** (DV2) | Đo lường hiệu suất lan truyền (tổng lượt xem hoặc số ngày trụ lại trên Top Trending) khi chịu tác động từ tương tác tiêu cực (RQ2). |
-| `category_id` | Categorical | **Supporting Variable** (SV) | Phân loại danh mục video (Music, Gaming, News,...) giúp kiểm soát biến nhiễu do đặc thù riêng của từng thể loại. |
-| `like_count` | Numerical (Discrete) | **Supporting Variable** (SV) | Dùng làm cơ sở so sánh đối chiếu và tính toán tỷ lệ tương tác (Dislike/Like ratio). |
-| `comment_count` | Numerical (Discrete) | **Supporting Variable** (SV) | Mức độ thảo luận chung của người xem, hỗ trợ phân tích độ sôi nổi của video. |
-| `video_id` / `title` | Text / String | **Supporting Variable** (SV) | Định danh dữ liệu và phục vụ phân tích khám phá (EDA) các từ khóa giật gân trong tiêu đề. |
+| `upload_hour` / `upload_period` | Datetime / Categorical (Office vs Rest) | **Independent Variable** (IV1) | Phân loại khung giờ đăng video (Giờ hành chính: 08:00–17:00 vs. Giờ nghỉ ngơi: 17:01–07:59 địa phương) để đánh giá tác động tới xác suất lọt Top Trending (RQ1). |
+| `negative_ratio` / `weighted_negative_ratio` | Numerical (Continuous, [0, 1]) | **Independent Variable** (IV2) | Đo lường tỷ lệ bình luận tiêu cực và phân cực cảm xúc từ khán giả thông qua mô hình NLP Transformer (CardiffNLP XLM-RoBERTa), thay thế cho `dislike_count` (do YouTube API đã ẩn chỉ số dislike công khai từ cuối năm 2021) để kiểm định ảnh hưởng tới độ lan tỏa của video (RQ2). |
+| `chart_status` / `is_trending` | Binary (Categorical) | **Dependent Variable** (DV1) | Trạng thái video có xuất hiện trên bảng xếp hạng Trending Chart trong chu kỳ theo dõi có độ phủ hay không (`OBSERVED_CHARTED` vs `NOT_OBSERVED_WITH_COVERAGE`) (RQ1). |
+| `log_view_count` ($\log(1 + \text{view\_count})$) | Numerical (Continuous) | **Dependent Variable** (DV2) | Đo lường độ lan tỏa (virality) quy chuẩn hóa phân phối lệch của lượt xem video khi chịu tác động từ cảm xúc bình luận (RQ2). |
+| `positive_ratio` | Numerical (Continuous, [0, 1]) | **Supporting Variable** (SV) | Tỷ lệ bình luận tích cực, giúp kiểm soát mức độ gắn kết thiện cảm của khán giả. |
+| `sentiment_polarity` | Numerical (Continuous, [-1, 1]) | **Supporting Variable** (SV) | Độ phân cực cảm xúc ròng (`positive_ratio - negative_ratio`). |
+| `category_id` | Categorical | **Supporting Variable** (SV) | Phân loại danh mục video (Gaming, Comedy, Music, Entertainment,...) kiểm soát biến nhiễu đặc thù thể loại. |
+| `like_to_view_ratio` | Numerical (Continuous) | **Supporting Variable** (SV) | Tỷ lệ Like trên View, phản ánh mức độ hài lòng cốt lõi của người xem. |
+| `comment_to_view_ratio` | Numerical (Continuous) | **Supporting Variable** (SV) | Tỷ lệ bình luận trên View, đo lường mật độ tương tác đàm thoại. |
+| `upload_hour_jst` / `is_weekend` | Numerical / Binary | **Supporting Variable** (SV) | Giờ xuất bản và cờ đánh dấu cuối tuần theo múi giờ Tokyo (Asia/Tokyo). |
