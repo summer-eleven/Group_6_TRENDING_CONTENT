@@ -1,3 +1,4 @@
-model,R2,MAE,RMSE
-Ridge Regression,0.0537,1.1347,1.456
-Random Forest,0.2659,0.9834,1.2824
+model,R2,Adj_R2,MAE,RMSE,5_Fold_CV_R2
+OLS Regression (Linear),0.1037,0.0867,1.1294,1.4646,N/A
+Ridge Regression (L2),0.0424,-0.0564,1.1294,1.4646,Negative (Overfit out-of-fold)
+Random Forest Regressor,0.2632,N/A,0.9921,1.2847,0.3107 +/- 0.044
