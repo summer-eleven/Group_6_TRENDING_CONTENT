@@ -1,4 +1,4 @@
-﻿# Group 6 â€“ Trending Content (YouTube)
+﻿# Group 6 Trending Content (YouTube)
 
 ## Project Title
 
